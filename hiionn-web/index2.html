@@ -312,6 +312,24 @@ footer{background:#15121F;color:rgba(255,255,255,.65);padding:56px 0 48px;font-s
  .tbl td:first-child::before{display:none;}
  .tbl td:last-child{border-bottom:0;}
 }
+/* [서비스 9카드] */
+.svc9-head{margin-top:10px;}
+.svc9{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:80px;}
+.svc9 .card{display:flex;flex-direction:column;}
+.svc9 .ico{width:72px;height:72px;margin-bottom:18px;flex:none;}
+.svc9 .ico img{width:100%;height:100%;object-fit:contain;}
+.svc9 h3{font-size:18px;line-height:1.45;margin:6px 0 10px;}
+.svc9 h3 small{display:block;font-size:14px;font-weight:600;color:var(--purple-deep);margin-top:4px;}
+.svc9 .card.new{border:2px solid var(--purple);background:#FBFAFF;}
+.svc9 .tag-new{display:inline-block;background:var(--purple);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;margin-left:6px;vertical-align:middle;}
+.svc9-note{margin:-60px 0 80px;}
+@media (max-width:980px){.svc9{grid-template-columns:1fr 1fr;}.svc9 .ico{width:64px;height:64px;}}
+@media (max-width:640px){.svc9{grid-template-columns:1fr;gap:14px;}.svc9 .card{flex-direction:row;gap:16px;padding:22px 18px;}.svc9 .ico{width:52px;height:52px;margin:0;}.svc9 h3{font-size:17px;}}
+/* [서비스 9카드 - 사진형 보정] */
+.svc9 .card{flex-direction:column;}
+.svc9 .ico{width:100%;height:auto;aspect-ratio:16/10;margin:0 0 18px;border-radius:12px;overflow:hidden;background:#F4F1FD;}
+.svc9 .ico img{width:100%;height:100%;object-fit:contain;display:block;}
+@media (max-width:640px){.svc9 .card{padding:18px;}.svc9 .ico{aspect-ratio:16/9;margin-bottom:14px;}}
 </style>
 <script>document.documentElement.classList.remove('no-js');</script>
 </head>
@@ -438,6 +456,23 @@ footer{background:#15121F;color:rgba(255,255,255,.65);padding:56px 0 48px;font-s
    <div class="card reveal"><div class="k">02 · ACADEMY</div><h3>Hiionn Academy</h3><p data-i18n="s2d">해외환자 CS·코디네이터·의료 마케터를 <span class="hl">현장 실무 중심으로 양성</span>합니다.</p></div>
    <div class="card reveal"><div class="k">03 · AX</div><h3 data-i18n="s3t">병원 AX 컨설팅</h3><p data-i18n="s3d">상담실 반복 업무에 <span class="hl">AI를 도입</span>하고, 병원만의 상담 지식을 정리합니다.</p></div>
   </div>
+  <!-- [서비스 9카드 시작] -->
+  <div class="sec-head svc9-head reveal"><div class="eng-label">Service Detail</div>
+   <h2 class="sec-title" data-i18n="sv_h">병원마다 다른 상황에 맞춰,<br>아홉 가지 방법으로 환자를 연결합니다</h2>
+   <p class="sec-sub" data-i18n="sv_s">병원마다 출발점이 다릅니다. <span class="hl">진료과·타깃 국가·예산</span>에 맞춰 필요한 방법을 골라 조합합니다.</p></div>
+  <div class="svc9">
+   <div class="card reveal"><div class="ico"><img src="./images/service/svc-01-content.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">01</div><h3 data-i18n="sv1t">콘텐츠 운영 전략<small>현지화 + 오리지널 제작</small></h3><p data-i18n="sv1d">현지 플랫폼 트렌드와 이용자 습관에 맞춰 기획·촬영·제작합니다. 번역만 하지 않고 <span class="hl">현지 사람이 공감하는 콘텐츠</span>를 따로 만듭니다.</p></div></div>
+   <div class="card reveal"><div class="ico"><img src="./images/service/svc-02-cs.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">02</div><h3 data-i18n="sv2t">해외 CS 전담 창구<small>주중·주말 응대</small></h3><p data-i18n="sv2d">모국어 전담 상담사와 AI 1차 응대로 문의를 놓치지 않습니다. 시술은 신중하게 결정하는 만큼, <span class="hl">숙련된 상담으로 예약까지</span> 이어갑니다.</p></div></div>
+   <div class="card reveal"><div class="ico"><img src="./images/service/svc-03-multichannel.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">03</div><h3 data-i18n="sv3t">멀티 채널 전략<small>중화권 전체로 확장</small></h3><p data-i18n="sv3d">간체·번체를 동시에 제작해 제작비를 줄이고, <span class="hl">중국·대만·홍콩</span>까지 타깃을 넓힙니다.</p></div></div>
+   <div class="card reveal"><div class="ico"><img src="./images/service/svc-04-ads.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">04</div><h3 data-i18n="sv4t">퍼포먼스 광고<small>광고 → 노출 → 문의 → 예약</small></h3><p data-i18n="sv4d">광고 소재를 직접 만들고 효과를 검증해, <span class="hl">실제 환자에게 닿고 문의로 이어지는</span> 광고를 운영합니다.</p></div></div>
+   <div class="card new reveal"><div class="ico"><img src="./images/service/svc-05-student-academy.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">05 <span class="tag-new">HIIONN ONLY</span></div><h3 data-i18n="sv5t">재한 유학생 체험단 + 코디네이터(마케터) 양성<small>체험이 콘텐츠가 되고, 사람이 남습니다</small></h3><p data-i18n="sv5d">한국에 사는 외국인 유학생이 병원을 직접 체험하고 <span class="hl">모국어로 경험을 전합니다.</span> 참여한 유학생은 Hiionn 아카데미에서 <span class="hl-p">해외환자 코디네이터·의료 마케터</span>로 성장해 병원 현장의 인재가 됩니다.</p><a href="#academy" class="go" data-i18n="p2g">아카데미 보기 →</a></div></div>
+   <div class="card reveal"><div class="ico"><img src="./images/service/svc-06-influencer.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">06</div><h3 data-i18n="sv6t">인플루언서(KOL) 협업<small>현지 인지도 확보</small></h3><p data-i18n="sv6d">팔로워가 병원의 타깃 환자와 맞는 <span class="hl">현지 인플루언서·KOL</span>을 찾아 병원과 연결합니다.</p></div></div>
+   <div class="card reveal"><div class="ico"><img src="./images/service/svc-07-optimize.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">07</div><h3 data-i18n="sv7t">광고 성과 관리<small>실시간 확인·개선</small></h3><p data-i18n="sv7d">전담팀이 광고 운영을 맡아 <span class="hl">병원 인력 추가 없이</span> 캠페인을 운영합니다. 성과는 계속 추적하고 리포트로 공유합니다.</p></div></div>
+   <div class="card reveal"><div class="ico"><img src="./images/service/svc-08-geo.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">08</div><h3 data-i18n="sv8t">AI 검색(GEO) 대응<small>AI 답변에 병원이 보이도록</small></h3><p data-i18n="sv8d">AI가 병원을 직접 추천하는 시대에 대비해, <span class="hl">정확하고 믿을 수 있는 병원 정보</span>를 꾸준히 쌓습니다.</p></div></div>
+   <div class="card reveal"><div class="ico"><img src="./images/service/svc-09-booking.png" alt="" width="72" height="72" loading="lazy" onerror="this.parentNode.style.display='none'"></div><div><div class="k">09</div><h3 data-i18n="sv9t">실시간 예약 + 기록 연동<small>위챗 미니프로그램</small></h3><p data-i18n="sv9d">환자가 위챗 안에서 시술 정보·가격을 확인하고 바로 예약합니다. 예약과 상담 기록은 <span class="hl-p">병원 자산으로 남습니다.</span></p></div></div>
+  </div>
+  <p class="src svc9-note" data-i18n="sv_note">※ 체험단·인플루언서 콘텐츠는 협찬 사실을 표시하고, 의료광고 심의 기준을 지켜 제작합니다.</p>
+  <!-- [서비스 9카드 끝] -->
   <div class="model-block reveal" id="online">
    <div>
     <span class="model-tag" data-i18n="on_tag">ONLINE · 공식 계정 위탁 운영</span>
@@ -813,6 +848,76 @@ alert:'病院名（お名前）と連絡先を入力してください。'};
 </script>
 <script>
 /* ===== 언어 전환 ===== */
+/* [서비스 9카드 번역] */
+Object.assign(I18N.en,{
+sv_h:'Nine ways to bring patients,<br>tailored to each hospital',
+sv_s:'Every hospital starts from a different place. We combine the methods that fit <span class="hl">your specialty, target country and budget</span>.',
+sv1t:'Content Strategy<small>Localized + original production</small>',
+sv1d:'We plan, shoot and edit for each local platform, making <span class="hl">content local viewers relate to</span>, not just translations.',
+sv2t:'Dedicated Overseas CS<small>Weekday &amp; weekend response</small>',
+sv2d:'Native-language staff and AI first response keep inquiries from slipping away. <span class="hl">Skilled consultation turns careful decisions into bookings.</span>',
+sv3t:'Multi-Channel<small>Reach the whole Chinese-speaking market</small>',
+sv3d:'Producing Simplified and Traditional Chinese together lowers cost and extends reach to <span class="hl">China, Taiwan and Hong Kong</span>.',
+sv4t:'Performance Ads<small>Ad → exposure → inquiry → booking</small>',
+sv4d:'We create ad materials and test what works, so ads <span class="hl">reach real patients and turn into inquiries</span>.',
+sv5t:'Student Reviewers in Korea + Coordinator Training<small>Experience becomes content, people stay</small>',
+sv5d:'International students living in Korea try the hospital and <span class="hl">share their experience in their own language.</span> Participants can train at Hiionn Academy to become <span class="hl-p">patient coordinators and medical marketers</span>.',
+sv6t:'Influencer (KOL) Collaboration<small>Build local awareness</small>',
+sv6d:'We match hospitals with <span class="hl">local influencers and KOLs</span> whose followers fit your target patients.',
+sv7t:'Ad Performance Management<small>Track and improve in real time</small>',
+sv7d:'Our team runs campaigns <span class="hl">without extra hospital staff</span>. Results are tracked continuously and shared in reports.',
+sv8t:'AI Search (GEO)<small>Be visible in AI answers</small>',
+sv8d:'As AI starts recommending hospitals, we build <span class="hl">accurate, trustworthy information</span> about your hospital.',
+sv9t:'Real-time Booking + Records<small>WeChat Mini Program</small>',
+sv9d:'Patients check treatment info and prices and book inside WeChat. Bookings and records <span class="hl-p">stay with the hospital as an asset.</span>',
+sv_note:'※ Reviewer and influencer content discloses sponsorship and follows Korean medical advertising review standards.'
+});
+Object.assign(I18N.zh,{
+sv_h:'根据每家医院的情况，<br>用九种方式连接海外患者',
+sv_s:'每家医院的起点不同。我们根据<span class="hl">科室、目标国家与预算</span>组合最合适的方法。',
+sv1t:'内容运营策略<small>本地化 + 原创制作</small>',
+sv1d:'针对当地平台趋势与用户习惯策划、拍摄、制作，不只是翻译，而是<span class="hl">让当地用户产生共鸣的内容</span>。',
+sv2t:'海外客服专属窗口<small>工作日·周末均可应答</small>',
+sv2d:'母语咨询师与 AI 初步应答，不错过任何咨询。医疗项目需慎重决定，<span class="hl">由熟练咨询促成预约</span>。',
+sv3t:'多渠道策略<small>覆盖整个华语市场</small>',
+sv3d:'简体·繁体同步制作，降低成本，并将目标扩展到<span class="hl">中国大陆·台湾·香港</span>。',
+sv4t:'效果广告投放<small>广告 → 曝光 → 咨询 → 预约</small>',
+sv4d:'自行制作广告素材并验证效果，让广告<span class="hl">触达真实患者并转化为咨询</span>。',
+sv5t:'在韩留学生体验团 + 协调员培养<small>体验成为内容，人才留在现场</small>',
+sv5d:'在韩国生活的留学生亲身体验医院，<span class="hl">用母语分享经历。</span>参与者可在 Hiionn 学院学习，成长为<span class="hl-p">海外患者协调员与医疗营销人员</span>。',
+sv6t:'网红（KOL）合作<small>提升当地知名度</small>',
+sv6d:'为医院匹配粉丝群与目标患者相符的<span class="hl">当地网红与 KOL</span>。',
+sv7t:'广告效果管理<small>实时追踪与优化</small>',
+sv7d:'专属团队代为运营广告，<span class="hl">医院无需额外人力</span>。持续追踪成效并提供报告。',
+sv8t:'AI 搜索（GEO）应对<small>让医院出现在 AI 回答中</small>',
+sv8d:'AI 开始直接推荐医院。我们持续积累<span class="hl">准确、可信的医院信息</span>。',
+sv9t:'实时预约 + 记录同步<small>微信小程序</small>',
+sv9d:'患者在微信内查看项目信息与价格并直接预约。预约与咨询记录<span class="hl-p">留在医院，成为医院资产。</span>',
+sv_note:'※ 体验团与网红内容均标明合作赞助，并遵守韩国医疗广告审查标准。'
+});
+Object.assign(I18N.ja,{
+sv_h:'病院ごとの状況に合わせ、<br>9つの方法で患者をつなぎます',
+sv_s:'病院ごとに出発点は違います。<span class="hl">診療科・対象国・予算</span>に合わせて最適な方法を組み合わせます。',
+sv1t:'コンテンツ運営戦略<small>ローカライズ + オリジナル制作</small>',
+sv1d:'現地プラットフォームの傾向と利用者の習慣に合わせて企画・撮影・制作し、<span class="hl">現地の人が共感するコンテンツ</span>を作ります。',
+sv2t:'海外CS専任窓口<small>平日・週末も対応</small>',
+sv2d:'母国語の担当者とAIの一次対応で問い合わせを逃しません。<span class="hl">熟練した相談で予約につなげます。</span>',
+sv3t:'マルチチャネル戦略<small>中華圏全体へ</small>',
+sv3d:'簡体字・繁体字を同時制作してコストを抑え、<span class="hl">中国・台湾・香港</span>まで対象を広げます。',
+sv4t:'パフォーマンス広告<small>広告 → 露出 → 問い合わせ → 予約</small>',
+sv4d:'広告素材を自社で制作・検証し、<span class="hl">実際の患者に届き問い合わせにつながる</span>広告を運用します。',
+sv5t:'在韓留学生体験団 + コーディネーター育成<small>体験がコンテンツに、人が現場に残る</small>',
+sv5d:'韓国に住む留学生が病院を体験し、<span class="hl">母国語で経験を伝えます。</span>参加者はHiionnアカデミーで<span class="hl-p">海外患者コーディネーター・医療マーケター</span>として成長できます。',
+sv6t:'インフルエンサー（KOL）協業<small>現地での認知度向上</small>',
+sv6d:'フォロワー層が対象患者に合う<span class="hl">現地インフルエンサー・KOL</span>と病院をつなぎます。',
+sv7t:'広告成果管理<small>リアルタイムで確認・改善</small>',
+sv7d:'専任チームが運用を代行するため<span class="hl">病院側の追加人員は不要</span>です。成果は常に追跡しレポートで共有します。',
+sv8t:'AI検索（GEO）対策<small>AIの回答に病院が表示されるように</small>',
+sv8d:'AIが病院をおすすめする時代に備え、<span class="hl">正確で信頼できる病院情報</span>を蓄積します。',
+sv9t:'リアルタイム予約 + 記録連携<small>WeChatミニプログラム</small>',
+sv9d:'患者はWeChat内で施術情報と価格を確認し、そのまま予約できます。記録は<span class="hl-p">病院の資産として残ります。</span>',
+sv_note:'※ 体験団・インフルエンサーのコンテンツは協賛であることを明示し、韓国の医療広告審議基準を守って制作します。'
+});
 const KO_EXTRA={title:document.title,alert:'병원명(성함)과 연락처를 입력해 주세요.'};
 let LANG='ko';
 const tr=k=>LANG==='ko'?(KO_EXTRA[k]||''):((I18N[LANG]||{})[k]||KO_EXTRA[k]||'');
