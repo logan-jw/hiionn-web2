@@ -1,0 +1,944 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<title>2026 의료 웰니스 관광 세미나 · 병원 코디네이터</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{margin:0;background:#07060E;overflow:hidden;height:100%}
+.deck{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#07060E}
+.scaler{width:1920px;height:1080px;transform-origin:center center;position:relative}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;color:#EDEAF7;
+  font-family:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR','NanumSquare',sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.15;word-break:keep-all;overflow-wrap:break-word;
+  opacity:0;visibility:hidden;transition:opacity .72s ease, transform .72s ease;transform:scale(1.012);
+  background:#0B0917}
+.slide.on{opacity:1;visibility:visible;transform:scale(1)}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.scrim{position:absolute;inset:0;background:
+  linear-gradient(102deg,rgba(8,6,17,.97) 0%,rgba(8,6,17,.95) 30%,rgba(8,6,17,.78) 52%,rgba(8,6,17,.44) 74%,rgba(8,6,17,.30) 100%),
+  linear-gradient(0deg,rgba(6,5,13,.88) 0%,rgba(6,5,13,.12) 36%,rgba(6,5,13,0) 62%)}
+.scrim.soft{background:
+  linear-gradient(102deg,rgba(8,6,17,.99) 0%,rgba(8,6,17,.97) 46%,rgba(8,6,17,.88) 70%,rgba(8,6,17,.72) 100%)}
+.tint{position:absolute;inset:0;background:radial-gradient(1200px 760px at 78% 26%,rgba(143,122,229,.26) 0%,rgba(111,90,208,.06) 52%,rgba(0,0,0,0) 74%);mix-blend-mode:screen;opacity:.85}
+.grain{position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+.plain{position:absolute;inset:0;background:
+  radial-gradient(1200px 700px at 12% 4%,rgba(111,90,208,.16) 0%,rgba(11,9,23,0) 62%),
+  radial-gradient(900px 620px at 92% 88%,rgba(143,122,229,.10) 0%,rgba(11,9,23,0) 66%),
+  linear-gradient(160deg,#0B0917 0%,#0A0814 58%,#08060F 100%)}
+.dots{position:absolute;opacity:.30;background-image:radial-gradient(rgba(185,171,240,.55) 1.4px,transparent 1.4px);background-size:22px 22px}
+.top{position:absolute;left:140px;right:120px;top:54px;display:flex;align-items:center;justify-content:space-between;z-index:8}
+.brand{display:flex;align-items:center;gap:16px}
+.brand img{height:34px;display:block;opacity:.94}
+.brand .sep{width:1px;height:22px;background:rgba(237,234,247,.2)}
+.brand .tag{font-size:12px;letter-spacing:.26em;color:rgba(237,234,247,.46)}
+.pg{display:flex;align-items:baseline;gap:9px;font-size:15px;letter-spacing:.14em;color:rgba(237,234,247,.46)}
+.pg b{font-size:24px;color:#C9BBFF;font-weight:800}
+.hd{position:absolute;left:140px;top:140px;width:1700px;z-index:6}
+.kicker{display:flex;align-items:center;gap:16px;font-size:22px;letter-spacing:.22em;color:#C9BBFF;font-weight:700;line-height:1.8}
+.kicker .ln{width:52px;height:2px;background:linear-gradient(90deg,#8F7AE5,rgba(143,122,229,0))}
+h2{margin-top:14px;font-size:62px;line-height:1.15;letter-spacing:-.035em;font-weight:800;color:#fff}
+.lb{font-size:22px;letter-spacing:.16em;color:#C9BBFF;font-weight:700;line-height:1.8}
+.t4{font-size:46px;line-height:1.6;letter-spacing:-.03em;font-weight:800;color:#fff}
+.t3{font-size:30px;line-height:1.9;letter-spacing:-.022em;font-weight:700;color:#EDEAF7}
+.t2{font-size:27px;line-height:1.7;letter-spacing:-.02em;color:#C2BBD8}
+.det{font-size:19px;line-height:1.65;color:#B3AACB}
+.tag-n{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 18px;border-radius:8px;font-size:22px;font-weight:800;white-space:nowrap;line-height:1.8}
+.card{background:linear-gradient(120deg,rgba(20,16,40,.9),rgba(24,19,46,.74));border:1px solid rgba(143,122,229,.26);border-radius:18px;box-shadow:0 18px 44px rgba(0,0,0,.42)}
+.rule{position:absolute;left:140px;right:120px;bottom:88px;height:1px;background:linear-gradient(90deg,rgba(143,122,229,.3),rgba(143,122,229,.04));z-index:7}
+.foot{position:absolute;left:140px;bottom:50px;font-size:14px;letter-spacing:.14em;color:rgba(237,234,247,.38);z-index:7}
+.foot b{color:#9B87EC}
+.cap{position:absolute;right:120px;bottom:104px;font-size:14px;letter-spacing:.1em;color:rgba(237,234,247,.3);z-index:7}
+.num{font-weight:800;letter-spacing:-.05em;line-height:1.1;background:linear-gradient(120deg,#fff,#B9ABF0);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* UI */
+.ui{position:fixed;left:0;right:0;bottom:0;height:6px;background:rgba(255,255,255,.05);z-index:90}
+.ui .bar{height:100%;width:0;background:linear-gradient(90deg,#6F5AD0,#B9ABF0);transition:width .4s ease}
+.hud{position:fixed;right:26px;bottom:26px;z-index:95;display:flex;gap:8px;font-family:'Malgun Gothic',sans-serif}
+.hud button{background:rgba(20,16,40,.82);color:#C9C2DE;border:1px solid rgba(143,122,229,.36);border-radius:10px;
+  padding:9px 14px;font-size:13px;cursor:pointer;letter-spacing:.02em}
+.hud button:hover{background:rgba(143,122,229,.24);color:#fff}
+.capbar{position:fixed;left:0;right:0;bottom:6px;z-index:88;background:rgba(6,5,14,.92);border-top:1px solid rgba(143,122,229,.3);
+  padding:16px 40px 18px;display:none;font-family:'Microsoft YaHei','PingFang SC',sans-serif}
+.capbar.on{display:block}
+.capbar .ko{font-size:16px;color:#8F87AC;letter-spacing:.02em;font-family:'Malgun Gothic',sans-serif;min-height:22px}
+.capbar .zh{font-size:30px;color:#fff;margin-top:6px;letter-spacing:.02em;line-height:1.4}
+.capbar .mode{position:absolute;right:40px;top:16px;font-size:12px;color:#8F7AE5;letter-spacing:.1em;font-family:'Malgun Gothic',sans-serif}
+.modal{position:fixed;inset:0;z-index:120;background:rgba(3,2,8,.9);display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px}
+.modal.on{display:flex}
+.modal .mtop{display:flex;gap:10px;align-items:center}
+.modal iframe{width:1280px;height:800px;border:0;border-radius:16px;background:#F7F5FF;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.modal button{background:rgba(143,122,229,.2);color:#EDEAF7;border:1px solid rgba(143,122,229,.5);border-radius:10px;padding:10px 18px;font-size:14px;cursor:pointer}
+.hint{position:fixed;left:26px;bottom:26px;z-index:95;font-size:12px;color:rgba(237,234,247,.34);font-family:'Malgun Gothic',sans-serif}
+</style></head><body>
+<div class="deck"><div class="scaler" id="scaler">
+<div class="slide" id="s1" data-n="1"><div class="bg" style="background-image:url(img/bg_cover.jpg)"></div>
+<div class="scrim soft" style="opacity:.55"></div><div class="grain"></div>
+<div class="top" style="left:140px;right:120px;top:64px"><div class="brand"><img src="img/logo_hion.png" style="height:44px"><span class="sep"></span><span class="tag">MEDICAL&nbsp;TOURISM</span></div>
+<div style="display:flex;align-items:center;gap:14px"><span class="det" style="font-size:13px;letter-spacing:.2em">공동주최</span>
+<span style="width:52px;height:52px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="img/logo_gilim.png" style="width:100%;height:100%;object-fit:contain"></span></div></div>
+<div style="position:absolute;left:140px;top:286px;width:1024px;z-index:6">
+ <div class="kicker" style="font-size:15px;letter-spacing:.3em">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료&nbsp;웰니스&nbsp;관광&nbsp;·&nbsp;병원&nbsp;코디네이터</div>
+ <div style="margin-top:28px;font-size:96px;line-height:1.12;letter-spacing:-.04em;font-weight:800;color:#fff">중국 환자 응대,<br><span class="num">기준</span>을 세우는 두 시간</div>
+ <div style="margin-top:32px;font-size:25px;line-height:1.78;color:#B6AED2">현장에서 바로 쓰는 <b style="color:#EDEAF7">상담 · 비자 · 법률 · 진료과 안내</b>를 한 번에 정리합니다.<br>오늘 배운 문장으로 내일 바로 응대합니다.</div>
+</div>
+<div style="position:absolute;left:140px;bottom:118px;display:flex;z-index:6">
+ <div style="padding:6px 0 6px 26px;border-left:2px solid rgba(143,122,229,.75)"><div class="det" style="font-size:13px;letter-spacing:.24em">일시</div><div style="margin-top:10px;font-size:33px;font-weight:700;color:#fff">11. 3 (화)</div><div style="margin-top:7px;font-size:19px;color:#B3AACB">13:00 – 15:00</div></div>
+ <div style="padding:6px 0 6px 26px;border-left:2px solid rgba(143,122,229,.75);margin-left:56px"><div class="det" style="font-size:13px;letter-spacing:.24em">강사</div><div style="margin-top:10px;font-size:33px;font-weight:700;color:#fff">조정원 이사</div><div style="margin-top:7px;font-size:19px;color:#B3AACB">하이온 의료관광사업부</div></div>
+ <div style="padding:6px 0 6px 26px;border-left:2px solid rgba(143,122,229,.75);margin-left:56px"><div class="det" style="font-size:13px;letter-spacing:.24em">진행</div><div style="margin-top:10px;font-size:33px;font-weight:700;color:#fff">120분</div><div style="margin-top:7px;font-size:19px;color:#B3AACB">한국어 + 중문 자막</div></div>
+</div>
+<div class="foot" style="right:120px;left:auto"><b style="color:#B9ABF0">01</b> / 46</div></div><div class="slide" id="s2" data-n="2"><div class="plain"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>02</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>SPEAKER &amp; ROADMAP</div><h2>강사 소개와 오늘의 지도</h2></div>
+<div style="position:absolute;left:140px;top:352px;width:600px;z-index:6">
+ <div style="display:flex;align-items:center;gap:26px">
+  <div style="position:relative;width:170px;height:170px;flex:0 0 auto"><div style="position:absolute;inset:-8px;border-radius:50%;background:conic-gradient(from 200deg,rgba(143,122,229,.9),rgba(111,90,208,.15),rgba(185,171,240,.65),rgba(143,122,229,.9))"></div>
+  <img src="img/profile.jpg" style="position:absolute;inset:0;width:170px;height:170px;border-radius:50%;object-fit:cover;object-position:center 18%;border:4px solid #0B0917"></div>
+  <div><div style="font-size:38px;font-weight:800;letter-spacing:-.03em;color:#fff">조정원 이사</div>
+  <div class="det" style="margin-top:8px;font-size:17px">하이온(Hiionn) 의료관광사업부</div>
+  <div style="margin-top:6px;font-size:15px;color:#7E769E">(주)아크로모빌리티 · 병원 경영 컨설턴트</div></div></div>
+ <div class="t2" style="margin-top:34px;font-size:29px;line-height:1.52;font-weight:700;color:#EDEAF7">병원 <span style="color:#B9ABF0">안</span>과 <span style="color:#B9ABF0">밖</span>을<br>모두 운영한 현장형 경영 컨설턴트</div>
+ <div style="margin-top:38px;display:flex;gap:14px">
+  <div class="card" style="flex:1;padding:20px 18px"><div class="lb" style="font-size:11px;letter-spacing:.22em">01</div><div style="margin-top:9px;font-size:33px;font-weight:800;color:#fff">13<span style="font-size:18px;color:#B9ABF0">개</span></div><div class="det" style="margin-top:5px;font-size:13px">병원 통합 경영지원</div></div>
+  <div class="card" style="flex:1;padding:20px 18px"><div class="lb" style="font-size:11px;letter-spacing:.22em">02</div><div style="margin-top:9px;font-size:33px;font-weight:800;color:#fff">20<span style="font-size:18px;color:#B9ABF0">건+</span></div><div class="det" style="margin-top:5px;font-size:13px">개원·운영 프로젝트</div></div>
+  <div class="card" style="flex:1;padding:20px 18px"><div class="lb" style="font-size:11px;letter-spacing:.22em">03</div><div style="margin-top:9px;font-size:33px;font-weight:800;color:#fff">100<span style="font-size:18px;color:#B9ABF0">회+</span></div><div class="det" style="margin-top:5px;font-size:13px">코디네이터·경영 강의</div></div></div>
+ <div style="margin-top:22px;font-size:13.5px;line-height:1.7;color:#6F6890">강남아이디안과 총괄이사 · 병원 MSO 컨설팅 법인 대표 · 치과·피부과 개원 기획</div>
+</div>
+<div style="position:absolute;left:812px;top:352px;width:968px;z-index:6">
+ <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid rgba(143,122,229,.2)">
+ <span class="lb" style="font-size:13px;letter-spacing:.24em">TODAY&nbsp;·&nbsp;120&nbsp;MIN</span><span style="font-size:13px;color:#6F6890">13:00 – 15:00</span></div>
+ <div style="display:flex;align-items:center;height:57px;"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">01</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">오프닝 · 강사 소개 · 자막 안내</span><span style="width:238px"><span style="display:block;width:27px;height:8px;border-radius:4px;background:linear-gradient(90deg,#6F5AD0,#8F7AE5);outline:none"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">5'</span></div><div style="display:flex;align-items:center;height:57px;"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">02</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">시장 한눈에</span><span style="width:238px"><span style="display:block;width:37px;height:8px;border-radius:4px;background:linear-gradient(90deg,#6F5AD0,#8F7AE5);outline:none"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">7'</span></div><div style="display:flex;align-items:center;height:57px;"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">03</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">비자 · 법률 · 불법 브로커</span><span style="width:238px"><span style="display:block;width:81px;height:8px;border-radius:4px;background:linear-gradient(90deg,#6F5AD0,#8F7AE5);outline:none"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">15'</span></div><div style="display:flex;align-items:center;height:57px;"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">04</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">예약 · 상담 절차</span><span style="width:238px"><span style="display:block;width:43px;height:8px;border-radius:4px;background:linear-gradient(90deg,#6F5AD0,#8F7AE5);outline:none"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">8'</span></div><div style="display:flex;align-items:center;height:57px;"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">05</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">진료과 8과목</span><span style="width:238px"><span style="display:block;width:216px;height:8px;border-radius:4px;background:linear-gradient(90deg,#6F5AD0,#8F7AE5);outline:none"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">40'</span></div><div style="display:flex;align-items:center;height:57px;opacity:.55"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">06</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">휴식 · 중간 퀴즈</span><span style="width:238px"><span style="display:block;width:54px;height:8px;border-radius:4px;background:#3E3560;outline:1px dashed rgba(143,122,229,.28)"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">10'</span></div><div style="display:flex;align-items:center;height:57px;"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">07</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">상담 시나리오 롤플레이</span><span style="width:238px"><span style="display:block;width:54px;height:8px;border-radius:4px;background:linear-gradient(90deg,#6F5AD0,#8F7AE5);outline:none"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">10'</span></div><div style="display:flex;align-items:center;height:57px;"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">08</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">취업 · 협력</span><span style="width:238px"><span style="display:block;width:70px;height:8px;border-radius:4px;background:linear-gradient(90deg,#6F5AD0,#8F7AE5);outline:none"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">13'</span></div><div style="display:flex;align-items:center;height:57px;"><span style="width:34px;font-size:12px;color:#5F587C;font-weight:700">09</span><span style="width:340px;font-size:17.5px;color:#D8D2EA">질의응답 · 마무리</span><span style="width:238px"><span style="display:block;width:64px;height:8px;border-radius:4px;background:linear-gradient(90deg,#6F5AD0,#8F7AE5);outline:none"></span></span><span style="width:52px;text-align:right;font-size:14px;color:#8F87AC;font-weight:700">12'</span></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div></div><div class="slide" id="s3" data-n="3"><div class="plain"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>03</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>OUR PROMISE</div><h2>오늘의 약속 3가지</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:392px;display:flex;gap:26px;z-index:6"><div class="card" style="flex:1;padding:44px 40px 40px;position:relative;overflow:hidden">
+    <div style="position:absolute;right:26px;bottom:6px;font-size:104px;font-weight:800;color:rgba(143,122,229,.10);line-height:1">01</div>
+    <div class="lb" style="font-size:12px;letter-spacing:.24em">PROMISE&nbsp;01</div>
+    <div class="t4" style="margin-top:22px;font-size:31px;line-height:1.45">효과를 장담하지 않습니다</div>
+    <div style="margin-top:20px;width:44px;height:2px;background:rgba(143,122,229,.5)"></div>
+    <div class="det" style="margin-top:20px;font-size:16.5px;line-height:1.7">무엇이 가능하고, 어떤 조건에서 결과가 달라지는지 설명합니다.</div>
+    <div class="det" style="margin-top:16px;font-size:14.5px;color:#7E769E">기대를 키우는 말 대신 판단 기준을 드립니다.</div></div><div class="card" style="flex:1;padding:44px 40px 40px;position:relative;overflow:hidden">
+    <div style="position:absolute;right:26px;bottom:6px;font-size:104px;font-weight:800;color:rgba(143,122,229,.10);line-height:1">02</div>
+    <div class="lb" style="font-size:12px;letter-spacing:.24em">PROMISE&nbsp;02</div>
+    <div class="t4" style="margin-top:22px;font-size:31px;line-height:1.45">법과 안전이 먼저입니다</div>
+    <div style="margin-top:20px;width:44px;height:2px;background:rgba(143,122,229,.5)"></div>
+    <div class="det" style="margin-top:20px;font-size:16.5px;line-height:1.7">등록된 병원·업체, 비자, 개인정보, 분쟁 창구를 먼저 짚습니다.</div>
+    <div class="det" style="margin-top:16px;font-size:14.5px;color:#7E769E">사고가 난 뒤가 아니라, 상담 첫 단계에서 확인합니다.</div></div><div class="card" style="flex:1;padding:44px 40px 40px;position:relative;overflow:hidden">
+    <div style="position:absolute;right:26px;bottom:6px;font-size:104px;font-weight:800;color:rgba(143,122,229,.10);line-height:1">03</div>
+    <div class="lb" style="font-size:12px;letter-spacing:.24em">PROMISE&nbsp;03</div>
+    <div class="t4" style="margin-top:22px;font-size:31px;line-height:1.45">모든 설명은 개인차가 있습니다</div>
+    <div style="margin-top:20px;width:44px;height:2px;background:rgba(143,122,229,.5)"></div>
+    <div class="det" style="margin-top:20px;font-size:16.5px;line-height:1.7">같은 시술도 상태와 회복 속도에 따라 결과가 다릅니다.</div>
+    <div class="det" style="margin-top:16px;font-size:14.5px;color:#7E769E">그래서 '보통 이렇다'는 범위로만 말합니다.</div></div></div>
+<div class="card" style="position:absolute;left:140px;right:120px;bottom:132px;display:flex;align-items:center;gap:26px;padding:26px 34px;z-index:6">
+<span class="lb" style="font-size:11px;letter-spacing:.24em;white-space:nowrap">PRICE&nbsp;POLICY</span><span style="width:1px;height:34px;background:rgba(143,122,229,.24)"></span>
+<span style="font-size:19px;color:#C9C2DE">환자 상태에 따라 달라질 수 있으며, 자세한 비용은 <b style="color:#fff">의료진 상담 이후 결정</b>됩니다.</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div></div><div class="slide" id="s4" data-n="4"><div class="bg" style="background-image:url(img/WEB_market_map_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>04</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>MARKET · 2025</div><h2>숫자로 보는 한국 의료관광</h2></div>
+<div style="position:absolute;left:140px;top:322px;width:640px;z-index:6">
+ <div class="lb" style="font-size:15px;letter-spacing:.2em">2025년 외국인 환자</div>
+ <div style="margin-top:16px;display:flex;align-items:flex-end;gap:10px"><span class="num" style="font-size:150px">201</span><span style="font-size:34px;font-weight:700;color:#B9ABF0;padding-bottom:16px">만 명</span></div>
+ <div class="t2" style="margin-top:22px;font-size:20px">2009년 통계 집계 이후 <b style="color:#fff">처음으로 200만 명</b>을 넘었습니다.<br><span style="color:#9C94BC">연환자(방문 횟수 합계)는 272만 명, 201개국입니다.</span></div>
+ <div style="margin-top:30px;display:flex;gap:12px">
+  <div style="padding:12px 20px;border-radius:10px;border:1px solid rgba(143,122,229,.28);background:rgba(143,122,229,.08)"><span class="lb" style="font-size:13px;letter-spacing:.16em">연환자</span><span style="margin-left:10px;font-size:20px;font-weight:800;color:#fff">272만</span></div>
+  <div style="padding:12px 20px;border-radius:10px;border:1px solid rgba(143,122,229,.28);background:rgba(143,122,229,.08)"><span class="lb" style="font-size:13px;letter-spacing:.16em">국적</span><span style="margin-left:10px;font-size:20px;font-weight:800;color:#fff">201개국</span></div></div></div>
+<div style="position:absolute;left:876px;top:300px;width:884px;z-index:6">
+ <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid rgba(143,122,229,.18)">
+ <span class="lb" style="font-size:13px;letter-spacing:.22em">연도별 외국인 환자</span><span style="font-size:13px;color:#6F6890">단위 · 만 명</span></div>
+ <div style="margin-top:28px;display:flex;align-items:flex-end;gap:56px;height:440px"><div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end">
+    <div style="font-size:30px;font-weight:800;color:#C9C2DE;margin-bottom:14px">61<span style="font-size:16px;font-weight:700;color:#A79FC6;margin-left:4px">만 명</span></div>
+    <div style="width:100%;max-width:190px;height:109px;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,rgba(143,122,229,.62),rgba(111,90,208,.42))"></div>
+    <div style="margin-top:18px;font-size:16px;color:#9A92B8;letter-spacing:.05em;font-weight:700">2023</div></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end">
+    <div style="font-size:30px;font-weight:800;color:#C9C2DE;margin-bottom:14px">117<span style="font-size:16px;font-weight:700;color:#A79FC6;margin-left:4px">만 명</span></div>
+    <div style="width:100%;max-width:190px;height:209px;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,rgba(143,122,229,.62),rgba(111,90,208,.42))"></div>
+    <div style="margin-top:18px;font-size:16px;color:#9A92B8;letter-spacing:.05em;font-weight:700">2024</div></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end">
+    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:14px">201<span style="font-size:16px;font-weight:700;color:#A79FC6;margin-left:4px">만 명</span></div>
+    <div style="width:100%;max-width:190px;height:340px;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,#B9ABF0,#8F7AE5)"></div>
+    <div style="margin-top:18px;font-size:16px;color:#9A92B8;letter-spacing:.05em;font-weight:700">2025</div></div></div>
+ <div style="margin-top:6px;padding-top:20px;border-top:1px solid rgba(143,122,229,.12);font-size:15.5px;color:#8F87AC;line-height:1.7">3년 사이 <b style="color:#B9ABF0">61만 → 117만 → 201만</b> 으로 늘었습니다. 이 증가분이 지금 코디네이터를 필요로 하는 자리입니다.</div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB market map (예시)</div></div><div class="slide" id="s5" data-n="5"><div class="bg" style="background-image:url(img/WEB_market_map_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>05</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>MARKET · WHERE</div><h2>어느 나라, 어느 진료과가 많을까</h2></div>
+<div style="position:absolute;left:140px;top:322px;width:700px;z-index:6">
+ <div class="lb" style="font-size:13px;letter-spacing:.22em">국적별 비중</div>
+ <div style="margin-top:30px;display:flex;align-items:center;gap:52px">
+  <svg width="270" height="270" viewBox="0 0 270 270">
+   <circle cx="135" cy="135" r="104" fill="none" stroke="rgba(143,122,229,.13)" stroke-width="26"/>
+   <circle cx="135" cy="135" r="104" fill="none" stroke="url(#g1)" stroke-width="26" stroke-linecap="round" stroke-dasharray="396.0 257.5" transform="rotate(-90 135 135)"/>
+   <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B9ABF0"/><stop offset="1" stop-color="#6F5AD0"/></linearGradient></defs>
+   <text x="135" y="128" text-anchor="middle" font-size="52" font-weight="800" fill="#fff" font-family="sans-serif">60.6<tspan font-size="22" fill="#B9ABF0">%</tspan></text>
+   <text x="135" y="158" text-anchor="middle" font-size="13" fill="#8F87AC" font-family="sans-serif">중국 + 일본</text></svg>
+  <div style="flex:1">
+   <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(143,122,229,.14)"><span style="font-size:18px;color:#D8D2EA">중국 · 일본</span><span style="font-size:22px;font-weight:800;color:#fff">121.9만</span></div>
+   <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(143,122,229,.14)"><span style="font-size:18px;color:#C4BDD8">대만 <span style="color:#7E769E;font-size:15px">9.2%</span></span><span style="font-size:20px;font-weight:700;color:#DDD7EC">18.6만</span></div>
+   <div style="display:flex;justify-content:space-between;padding:14px 0"><span style="font-size:18px;color:#C4BDD8">미국 <span style="color:#7E769E;font-size:15px">8.6%</span></span><span style="font-size:20px;font-weight:700;color:#DDD7EC">17.3만</span></div></div></div></div>
+<div style="position:absolute;left:904px;top:322px;width:856px;z-index:6"><div class="lb" style="font-size:13px;letter-spacing:.22em">진료과별 비중</div><div style="margin-top:30px"><div style="display:flex;align-items:center;padding:15px 0;border-bottom:1px solid rgba(143,122,229,.11)"><span style="width:126px;font-size:18px;color:#D8D2EA">피부과</span><span style="width:389px;height:26px;border-radius:6px;background:linear-gradient(90deg,rgba(143,122,229,.75),rgba(111,90,208,.45))"></span><span style="margin-left:auto;font-size:14px;color:#7E769E;width:76px;text-align:right">131.3만</span><span style="font-size:21px;font-weight:800;color:#fff;width:104px;text-align:right">62.9<span style="font-size:13px;color:#A79FC6">%</span></span></div><div style="display:flex;align-items:center;padding:15px 0;border-bottom:1px solid rgba(143,122,229,.11)"><span style="width:126px;font-size:18px;color:#D8D2EA">성형외과</span><span style="width:69px;height:26px;border-radius:6px;background:linear-gradient(90deg,rgba(143,122,229,.75),rgba(111,90,208,.45))"></span><span style="margin-left:auto;font-size:14px;color:#7E769E;width:76px;text-align:right">23.3만</span><span style="font-size:21px;font-weight:800;color:#fff;width:104px;text-align:right">11.2<span style="font-size:13px;color:#A79FC6">%</span></span></div><div style="display:flex;align-items:center;padding:15px 0;border-bottom:1px solid rgba(143,122,229,.11)"><span style="width:126px;font-size:18px;color:#D8D2EA">내과 통합</span><span style="width:57px;height:26px;border-radius:6px;background:linear-gradient(90deg,rgba(143,122,229,.75),rgba(111,90,208,.45))"></span><span style="margin-left:auto;font-size:14px;color:#7E769E;width:76px;text-align:right">19.2만</span><span style="font-size:21px;font-weight:800;color:#fff;width:104px;text-align:right">9.2<span style="font-size:13px;color:#A79FC6">%</span></span></div><div style="display:flex;align-items:center;padding:15px 0;border-bottom:1px solid rgba(143,122,229,.11)"><span style="width:126px;font-size:18px;color:#D8D2EA">검진센터</span><span style="width:30px;height:26px;border-radius:6px;background:linear-gradient(90deg,rgba(143,122,229,.75),rgba(111,90,208,.45))"></span><span style="margin-left:auto;font-size:14px;color:#7E769E;width:76px;text-align:right">6.5만</span><span style="font-size:21px;font-weight:800;color:#fff;width:104px;text-align:right">3.1<span style="font-size:13px;color:#A79FC6">%</span></span></div></div></div>
+<div style="position:absolute;left:140px;top:748px;width:1640px;display:flex;gap:44px;z-index:6">
+ <div style="width:700px;height:96px;display:flex;align-items:center;padding:0 26px;border-left:2px solid rgba(143,122,229,.62);background:rgba(143,122,229,.07);border-radius:0 12px 12px 0"><span style="font-size:16.5px;line-height:1.62;color:#B0A8CC">중국 환자는 전년보다 <b style="color:#C9BBFF">137.5%</b> 늘었습니다.<br>지금 배우는 응대가 곧 중국어 응대인 이유입니다.</span></div>
+ <div style="width:856px;height:96px;display:flex;align-items:center;padding:0 26px;border-radius:12px;background:rgba(255,255,255,.028);border:1px solid rgba(143,122,229,.16)"><span style="font-size:16.5px;line-height:1.62;color:#B0A8CC">전체 외국인 환자의 <b style="color:#C9BBFF">62.9%가 피부과</b>입니다. 다만 방문 건수 기준이라, 상담 난이도가 낮다는 뜻은 아닙니다.</span></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB market map (예시)</div></div><div class="slide" id="s6" data-n="6"><div class="bg" style="background-image:url(img/WEB_coordinator_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>06</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>ROLE</div><h2>상담실장은 누구인가</h2></div>
+<div class="dots" style="left:96px;top:472px;width:210px;height:150px"></div>
+<div style="position:absolute;left:140px;top:300px;width:800px;z-index:6">
+ <div class="t4">환자와 의료진 사이에서<br><span style="color:#C9BBFF">이해를 통역</span>하는 사람</div>
+ <div style="margin-top:34px;width:76px;height:3px;background:linear-gradient(90deg,#8F7AE5,rgba(143,122,229,0))"></div>
+ <div style="margin-top:28px;font-size:20px;line-height:1.7;color:#C2BBD8">진료 가능 여부와 치료 방법은 <b style="color:#fff">의사가 판단</b>합니다.<br>상담실장은 그 판단을 환자가 이해하도록 옮깁니다.</div></div>
+<div style="position:absolute;left:140px;top:706px;width:800px;z-index:6;padding:30px 34px;border-radius:16px;background:rgba(143,122,229,.12);border-left:3px solid rgba(185,171,240,.8)">
+ <div class="t3" style="font-size:27px;color:#E4DFF4">의료 판단은 의사의 몫,<br>설명은 상담실장의 몫</div></div>
+<div style="position:absolute;left:1010px;top:300px;width:790px;z-index:6">
+ <div style="display:flex;align-items:center;gap:18px;margin-bottom:22px"><span class="tag-n" style="background:rgba(143,122,229,.24);color:#DCD4F8;border:1px solid rgba(143,122,229,.5)">OX 점검</span><span class="det" style="font-size:19px">세 문장 중 맞는 것을 골라 보세요</span></div><div class="card" style="display:flex;align-items:center;gap:26px;padding:26px 30px;margin-bottom:16px">
+    <span style="font-size:24px;font-weight:800;color:#6F6890;width:40px;flex:0 0 auto">01</span>
+    <span class="t3" style="flex:1">상담실장이 시술 가능 여부를<br>최종 결정한다</span>
+    <span class="tag-n" style="background:#ef7b931f;color:#ef7b93;border:1px solid #ef7b935e">틀림</span></div><div class="card" style="display:flex;align-items:center;gap:26px;padding:26px 30px;margin-bottom:16px">
+    <span style="font-size:24px;font-weight:800;color:#6F6890;width:40px;flex:0 0 auto">02</span>
+    <span class="t3" style="flex:1">환자 정보는 동의 없이<br>공유하지 않는다</span>
+    <span class="tag-n" style="background:#5fc7a31f;color:#5fc7a3;border:1px solid #5fc7a35e">맞음</span></div><div class="card" style="display:flex;align-items:center;gap:26px;padding:26px 30px;margin-bottom:16px">
+    <span style="font-size:24px;font-weight:800;color:#6F6890;width:40px;flex:0 0 auto">03</span>
+    <span class="t3" style="flex:1">효과를 확실히 약속하면<br>신뢰가 생긴다</span>
+    <span class="tag-n" style="background:#ef7b931f;color:#ef7b93;border:1px solid #ef7b935e">틀림</span></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB coordinator (예시)</div></div><div class="slide" id="s7" data-n="7"><div class="bg" style="background-image:url(img/WEB_visa_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>07</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>VISA · 1 / 2</div><h2>비자, 두 갈래와 신청 길</h2></div>
+<div class="dots" style="left:1438px;top:604px;width:230px;height:132px"></div>
+<div style="position:absolute;left:140px;top:296px;width:1640px;display:flex;gap:26px;z-index:6">
+ <div class="card" style="flex:1;padding:34px 38px">
+  <div style="display:flex;justify-content:space-between"><div><div class="lb" style="color:#A79FC6;font-size:19px">SHORT-TERM</div><div style="margin-top:8px;font-size:40px;line-height:1.5;font-weight:800;color:#fff">단기 의료관광 비자</div></div>
+  <div style="text-align:right"><div class="num" style="font-size:68px">90</div><div class="lb" style="font-size:19px;letter-spacing:.1em;color:#A79FC6">일 이내</div></div></div>
+  <div style="margin-top:22px;height:1px;background:rgba(143,122,229,.26)"></div><div class="t3" style="margin-top:20px;font-size:27px">등록된 유치기관의 초청으로 신청합니다.</div></div>
+ <div class="card" style="flex:1;padding:34px 38px">
+  <div style="display:flex;justify-content:space-between"><div><div class="lb" style="color:#A79FC6;font-size:19px">TREATMENT</div><div style="margin-top:8px;font-size:40px;line-height:1.5;font-weight:800;color:#fff">치료요양 비자</div></div>
+  <div style="text-align:right"><div style="font-size:44px;font-weight:800;color:#C9BBFF">개별</div><div class="lb" style="font-size:19px;letter-spacing:.1em;color:#A79FC6">심사</div></div></div>
+  <div style="margin-top:22px;height:1px;background:rgba(143,122,229,.26)"></div><div class="t3" style="margin-top:20px;font-size:27px">오래 치료·요양이 필요할 때 해당합니다.</div></div></div>
+<div style="position:absolute;left:140px;top:700px;width:1640px;z-index:6"><div class="lb" style="margin-bottom:16px">신청&nbsp;경로&nbsp;세&nbsp;가지</div>
+ <div style="position:relative;display:flex;gap:22px"><div style="position:absolute;left:60px;right:60px;top:56px;height:2px;background:repeating-linear-gradient(90deg,rgba(143,122,229,.55) 0 12px,transparent 12px 24px)"></div><div style="flex:1;position:relative;padding:32px 30px;border-radius:16px;background:rgba(18,14,34,.9);border:1px solid rgba(143,122,229,.26)">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:44px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#fff;flex:0 0 auto">1</span>
+    <span class="t3" style="font-size:27px">사증발급인정서</span></div><div class="det" style="margin-top:12px">원칙이 되는 경로입니다.</div></div><div style="flex:1;position:relative;padding:32px 30px;border-radius:16px;background:rgba(18,14,34,.9);border:1px solid rgba(143,122,229,.26)">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:44px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#fff;flex:0 0 auto">2</span>
+    <span class="t3" style="font-size:27px">공관 직접 신청</span></div><div class="det" style="margin-top:12px">등록 유치기관의 초청을 받은 경우입니다.</div></div><div style="flex:1;position:relative;padding:32px 30px;border-radius:16px;background:rgba(18,14,34,.9);border:1px solid rgba(143,122,229,.5)">
+    <div style="display:flex;align-items:center;gap:14px"><span style="width:44px;height:44px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#fff;flex:0 0 auto">3</span>
+    <span class="t3" style="font-size:27px">전자비자</span></div><div class="det" style="margin-top:12px">우수 유치기관만 쓸 수 있습니다.</div></div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB visa (예시)</div></div><div class="slide" id="s8" data-n="8"><div class="bg" style="background-image:url(img/WEB_visa_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>08</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>VISA · 2 / 2</div><h2>서류·동반자·연장, 그리고 최근 변화</h2></div>
+<div style="position:absolute;left:140px;top:322px;width:1060px;display:flex;flex-direction:column;gap:18px;z-index:6">
+ <div style="display:flex;gap:18px"><div class="card" style="flex:1;padding:30px"><div class="lb" style="font-size:20px">DOCUMENTS</div><div class="t4" style="margin-top:14px;font-size:42px">서류</div><div class="det" style="margin-top:18px;font-size:19.5px">신청서와 여권, 진단서·치료계획서, 재정 능력 서류가 기본입니다. 중국 거주자는 주중국대사관 최신 안내를 기준으로 합니다.</div></div><div class="card" style="flex:1;padding:30px"><div class="lb" style="font-size:20px">COMPANION</div><div class="t4" style="margin-top:14px;font-size:42px">동반자</div><div class="det" style="margin-top:18px;font-size:19.5px">배우자·직계가족·간병인이 관계 서류로 동반할 수 있습니다. 다만 환자가 허가를 받았다고 동반자 자격이 자동으로 정해지지는 않습니다.</div></div></div><div class="card" style="flex:1;padding:30px"><div class="lb" style="font-size:20px">EXTENSION</div><div class="t4" style="margin-top:14px;font-size:42px">연장</div><div class="det" style="margin-top:18px;font-size:19.5px">체류 기간이 끝나기 전에 관할 출입국·외국인관서에 신청하는 것이 원칙입니다. 가능 범위는 개별 심사입니다.</div></div></div>
+<div style="position:absolute;left:1252px;top:322px;width:508px;height:562px;padding:40px 34px 52px;border-radius:20px;background:linear-gradient(170deg,rgba(143,122,229,.16),rgba(111,90,208,.05));border:1px solid rgba(143,122,229,.3);z-index:6">
+ <div class="lb" style="font-size:20px">RECENT</div><div class="t4" style="margin-top:14px;font-size:40px">최근 동향</div>
+ <div style="margin-top:28px;padding-bottom:20px;border-bottom:1px solid rgba(143,122,229,.22)"><div class="num" style="font-size:46px">112<span style="font-size:24px;color:#B9ABF0">곳</span></div><div class="det" style="margin-top:10px">우수 유치기관, 90곳에서 확대</div></div>
+ <div style="margin-top:18px;padding-bottom:20px;border-bottom:1px solid rgba(143,122,229,.22)"><div class="num" style="font-size:46px">9,804<span style="font-size:24px;color:#B9ABF0">건</span></div><div class="det" style="margin-top:10px">단기 의료관광 비자 발급</div></div>
+ <div style="margin-top:18px"><div class="num" style="font-size:46px">+40<span style="font-size:24px;color:#B9ABF0">%</span></div><div class="det" style="margin-top:10px">전년 같은 기간 대비</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB visa (예시)</div></div><div class="slide" id="s9" data-n="9"><div class="bg" style="background-image:url(img/WEB_law_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>09</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>LAW · 1 / 2</div><h2>등록 없이는 환자를 소개할 수 없습니다</h2></div>
+<div style="position:absolute;left:140px;top:318px;width:1640px;z-index:6"><div class="t3" style="font-size:32px;color:#D8D2EA">돈을 받고 환자를 병원에 소개하는 일은 원칙적으로 금지입니다. <span style="color:#C9BBFF">국내 건강보험에 가입하지 않은 외국인 환자를 유치하는 경우만 예외</span>이며, 그것도 등록한 의료기관과 유치업자만 할 수 있습니다.</div></div>
+<div style="position:absolute;left:140px;right:120px;top:462px;z-index:6"><div class="lb" style="margin-bottom:20px">수수료&nbsp;상한&nbsp;·&nbsp;보건복지부&nbsp;고시</div><div style="display:flex;gap:22px"><div class="card" style="flex:1;padding:30px"><div class="t3" style="font-size:27px;color:#C9C2DE">상급종합병원</div><div class="num" style="margin-top:14px;font-size:76px">15<span style="font-size:30px">%</span></div><div class="det" style="margin-top:10px">총 진료비 대비 상한</div></div><div class="card" style="flex:1;padding:30px"><div class="t3" style="font-size:27px;color:#C9C2DE">종합병원 · 병원</div><div class="num" style="margin-top:14px;font-size:76px">20<span style="font-size:30px">%</span></div><div class="det" style="margin-top:10px">총 진료비 대비 상한</div></div><div class="card" style="flex:1;padding:30px"><div class="t3" style="font-size:27px;color:#C9C2DE">의원</div><div class="num" style="margin-top:14px;font-size:76px">30<span style="font-size:30px">%</span></div><div class="det" style="margin-top:10px">총 진료비 대비 상한</div></div></div></div>
+<div style="position:absolute;left:140px;right:120px;top:756px;display:flex;gap:22px;z-index:6">
+ <div class="card" style="flex:1;padding:26px 30px"><span class="lb" style="font-size:20px">등록 요건</span><div class="det" style="margin-top:12px;font-size:19px">병원은 진료과목마다 전문의 1명 이상과 의료사고 배상 책임 보험이 필요합니다. 등록 유효기간은 3년입니다.</div></div>
+ <div class="card" style="flex:1;padding:26px 30px"><span class="lb" style="font-size:20px">광고</span><div class="det" style="margin-top:12px;font-size:19px">외국인 환자를 끌어오는 국내 의료광고는 원칙적으로 금지입니다. 사전 심의와 전후 비교 사진도 금지됩니다.</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB law (예시)</div></div><div class="slide" id="s10" data-n="10"><div class="bg" style="background-image:url(img/WEB_law_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>10</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>LAW · 2 / 2</div><h2>불법 브로커, 사례 하나와 대응</h2></div>
+<div style="position:absolute;left:140px;top:326px;width:940px;padding:38px 40px;border-radius:20px;background:linear-gradient(168deg,rgba(239,123,147,.1),rgba(255,255,255,.02));border:1px solid rgba(239,123,147,.32);z-index:6">
+ <div class="lb" style="color:#ef7b93">CASE · 제주</div>
+ <div class="t3" style="margin-top:18px;font-size:29px;line-height:1.35">의료기관 원장과 경영이사가 브로커에게서 외국인 환자 17명을 소개받고, 진료비에 대한 수수료를 지급한 혐의로 <span style="color:#fff">불구속 기소되었다는 보도</span>입니다.</div>
+ <div style="margin-top:30px;display:flex;gap:16px">
+  <div style="flex:1;padding:20px 22px;border-radius:12px;background:rgba(0,0,0,.28)"><div class="num" style="font-size:44px">17<span style="font-size:20px;color:#A79FC6">명</span></div><div class="det" style="margin-top:8px;font-size:18px">소개받은 환자</div></div>
+  <div style="flex:1;padding:20px 22px;border-radius:12px;background:rgba(0,0,0,.28)"><div class="num" style="font-size:44px">1억&nbsp;180<span style="font-size:20px;color:#A79FC6">만원</span></div><div class="det" style="margin-top:8px;font-size:18px">진료비</div></div>
+  <div style="flex:1;padding:20px 22px;border-radius:12px;background:rgba(0,0,0,.28)"><div style="font-size:44px;font-weight:800;color:#ef7b93">1,250<span style="font-size:20px;color:#A79FC6">만원</span></div><div class="det" style="margin-top:8px;font-size:18px">지급한 수수료</div></div></div></div>
+<div style="position:absolute;left:1122px;top:326px;width:638px;z-index:6">
+ <div class="card" style="padding:30px 32px"><div class="lb" style="font-size:20px">처벌 근거</div><div class="t3" style="margin-top:14px;font-size:27px">등록 없이 외국인 환자를 유치하면 <span style="color:#fff">3년 이하 징역 또는 3천만 원 이하 벌금</span>입니다. 등록이 취소될 수 있고 병원도 처벌 대상입니다.</div></div>
+ <div class="card" style="margin-top:20px;padding:30px 32px"><div class="lb" style="font-size:20px">소개비를 제안받았다면</div>
+  <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px">
+   <div style="display:flex;gap:14px;align-items:center"><span class="tag-n" style="background:rgba(143,122,229,.18);color:#C9BBFF;height:38px;font-size:20px">1</span><span class="t3" style="font-size:25px">거절합니다</span></div>
+   <div style="display:flex;gap:14px;align-items:center"><span class="tag-n" style="background:rgba(143,122,229,.18);color:#C9BBFF;height:38px;font-size:20px">2</span><span class="t3" style="font-size:25px">등록 업체인지 확인합니다</span></div>
+   <div style="display:flex;gap:14px;align-items:center"><span class="tag-n" style="background:rgba(143,122,229,.18);color:#C9BBFF;height:38px;font-size:20px">3</span><span class="t3" style="font-size:25px">병원 담당 부서에 보고합니다</span></div></div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:24px 34px;border-radius:14px;background:rgba(143,122,229,.09);border-left:3px solid rgba(143,122,229,.75);z-index:6">
+ <span class="t3" style="font-size:28px">정식 등록 파트너와 불법 브로커의 차이는 수수료가 아니라 <span style="color:#C9BBFF">환자 보호와 책임</span>입니다.</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB law (예시)</div></div><div class="slide" id="s11" data-n="11"><div class="bg" style="background-image:url(img/WEB_coordinator_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>11</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>PROCESS</div><h2>예약·상담 흐름 10단계</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:330px;z-index:6">
+ <div style="display:flex;gap:14px"><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">1</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">문의</span></div><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">2</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">사전 상담·자료 수집</span></div><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">3</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">견적 안내</span></div><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">4</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">예약·계약</span></div><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">5</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">비자·입국 준비</span></div></div>
+ <div style="display:flex;gap:14px;margin-top:22px"><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">6</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">입국·이동</span></div><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">7</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">진료 전 상담·동의</span></div><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">8</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">시술·진료</span></div><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">9</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">퇴원·귀국</span></div><div style="flex:1;display:flex;align-items:center;gap:14px;padding:22px 18px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.22)">
+        <span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,#8F7AE5,#6F5AD0);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex:0 0 auto">10</span>
+        <span style="font-size:22px;line-height:1.35;color:#DCD6EC;font-weight:700">사후관리</span></div></div>
+ <div class="card" style="margin-top:44px;padding:32px 36px">
+  <div class="lb" style="font-size:20px">견적&nbsp;단계에서</div>
+  <div class="t3" style="margin-top:14px;font-size:29px">금액은 병원 공식 안내만 전달하고, 통일 문구로 답합니다.</div>
+  <div class="det" style="margin-top:14px;font-size:20px">"환자 상태에 따라 달라질 수 있으며, 자세한 비용은 의료진 상담 이후 결정됩니다."</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB coordinator (예시)</div></div><div class="slide" id="s12" data-n="12"><div class="bg" style="background-image:url(img/WEB_coordinator_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>12</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>CHECKLIST</div><h2>코디네이터 체크리스트</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:26px 24px"><div class="lb" style="font-size:19px">계약·법적 확인</div>
+    <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">등록 업체인지 확인</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">진료계약서 사본 확보</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">예상 진료비 문서 확인</span></div></div></div><div class="card" style="flex:1;padding:26px 24px"><div class="lb" style="font-size:19px">환자 안내 문서</div>
+    <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">진단명·치료 방법·부작용 안내</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">분쟁 해결 절차 안내</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">환자 언어로 된 문서 확인</span></div></div></div><div class="card" style="flex:1;padding:26px 24px"><div class="lb" style="font-size:19px">개인정보</div>
+    <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">국외 이전 동의 확인</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">동의 범위 밖 공유 금지</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">민감정보 별도 관리</span></div></div></div><div class="card" style="flex:1;padding:26px 24px"><div class="lb" style="font-size:19px">비자·입국</div>
+    <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">체류자격별 필요 서류</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">동반자 서류 확인</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">연장 신청 시점 안내</span></div></div></div><div class="card" style="flex:1;padding:26px 24px"><div class="lb" style="font-size:19px">비상 연락</div>
+    <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">병원 담당자 연락처</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">통역 연결 방법</span></div><div style="display:flex;gap:10px;align-items:flex-start"><span style="width:16px;height:16px;border-radius:4px;border:1.5px solid rgba(143,122,229,.6);flex:0 0 auto;margin-top:5px"></span><span style="font-size:17px;line-height:1.5;color:#C2BBD8">귀국 뒤 연락 경로</span></div></div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 34px;border-radius:14px;background:rgba(20,16,40,.86);border:1px solid rgba(143,122,229,.3);z-index:6">
+ <span class="lb" style="font-size:19px">말하지&nbsp;않을&nbsp;것</span>
+ <span class="t3" style="margin-left:22px;font-size:26px">효과 보장 · "누구나 이렇게 된다" · 다른 환자 경험담 · 전후 비교 사진 · 의료 판단 단정</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB coordinator (예시)</div></div><div class="slide" id="s13" data-n="13"><div class="bg" style="background-image:url(img/WEB_role_4type_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>13</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>BEFORE WE START</div><h2>이제 진료과로 갑니다</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1640px;z-index:6">
+ <div class="t4" style="font-size:44px">상담실장은 의사가 아닙니다.<br><span style="color:#C9BBFF">환자가 이해하도록 쉽게 풀어 주는 사람</span>입니다.</div></div>
+<div style="position:absolute;left:140px;right:120px;top:520px;display:flex;gap:14px;z-index:6"><div style="flex:1;padding:24px 22px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.24)">
+    <div class="lb" style="font-size:18px">01</div><div style="margin-top:10px;font-size:24px;font-weight:800;color:#fff;line-height:1.4">쉬운 말로</div>
+    <div class="det" style="margin-top:10px;font-size:16.5px">어려운 낱말은 바로 풀어 줍니다.</div></div><div style="flex:1;padding:24px 22px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.24)">
+    <div class="lb" style="font-size:18px">02</div><div style="margin-top:10px;font-size:24px;font-weight:800;color:#fff;line-height:1.4">효과는 늘 개인차와 함께</div>
+    <div class="det" style="margin-top:10px;font-size:16.5px">결과를 약속하는 말은 하지 않습니다.</div></div><div style="flex:1;padding:24px 22px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.24)">
+    <div class="lb" style="font-size:18px">03</div><div style="margin-top:10px;font-size:24px;font-weight:800;color:#fff;line-height:1.4">가격은 같은 문장으로</div>
+    <div class="det" style="margin-top:10px;font-size:16.5px">의료진 상담 이후 결정된다고 안내합니다.</div></div><div style="flex:1;padding:24px 22px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.24)">
+    <div class="lb" style="font-size:18px">04</div><div style="margin-top:10px;font-size:24px;font-weight:800;color:#fff;line-height:1.4">의료 판단은 의사에게</div>
+    <div class="det" style="margin-top:10px;font-size:16.5px">가능·불가능을 단정하지 않습니다.</div></div><div style="flex:1;padding:24px 22px;border-radius:14px;background:rgba(18,14,34,.88);border:1px solid rgba(143,122,229,.24)">
+    <div class="lb" style="font-size:18px">05</div><div style="margin-top:10px;font-size:24px;font-weight:800;color:#fff;line-height:1.4">이상 신호는 즉시 연락</div>
+    <div class="det" style="margin-top:10px;font-size:16.5px">기다리지 말고 병원에 알리도록 안내합니다.</div></div></div>
+<div style="position:absolute;left:140px;bottom:132px;z-index:6"><span class="det" style="font-size:19px">자막 용어집에 미리 등록해 두면 실시간 자막이 흔들리지 않습니다.</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB role 4type (예시)</div></div><div class="slide" id="s14" data-n="14"><div class="bg" style="background-image:url(img/DERM_lifting_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>14</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>DERMATOLOGY</div><h2>피부 · 한눈에</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">HIFU · RF</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">리프팅 열 시술</div>
+    <div class="det" style="margin-top:12px;font-size:17px">열 에너지로 처진 피부를 단단하게</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Botulinum toxin</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">보툴리눔톡신 주사</div>
+    <div class="det" style="margin-top:12px;font-size:17px">표정 주름이 접히는 움직임을 줄임</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Dermal filler</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">필러 주사</div>
+    <div class="det" style="margin-top:12px;font-size:17px">꺼진 곳에 젤을 채워 볼륨을 만듦</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Skin booster</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">스킨부스터</div>
+    <div class="det" style="margin-top:12px;font-size:17px">피부에 수분을 채워 결을 정돈</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Pigment laser</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">색소·점 레이저</div>
+    <div class="det" style="margin-top:12px;font-size:17px">색소를 잘게 부수고 몸이 치우게 함</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:126px;display:flex;align-items:center;gap:20px;z-index:6">
+ <span class="tag-n" style="background:rgba(143,122,229,.2);color:#C9BBFF;border:1px solid rgba(143,122,229,.45)">카드를&nbsp;눌러&nbsp;보세요</span>
+ <span class="det" style="font-size:18px">대표 항목 5개 · 나머지는 '전체 질문 보기'에서 다룹니다</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · DERM lifting (예시)</div></div><div class="slide" id="s15" data-n="15"><div class="bg" style="background-image:url(img/DERM_laser_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>15</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>DERMATOLOGY</div><h2>피부 · 원리와 효과</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:20px;z-index:6"><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">열</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">초음파·고주파로 피부 속에 열을 모읍니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">몸이 스스로 피부를 받치는 조직을 만든다고 알려져 있습니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">빛</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">색소에 반응하는 빛을 씁니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">색소를 잘게 나누면 몸이 알아서 치웁니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">주사</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">근육·수분·볼륨을 직접 다룹니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">움직임을 줄이거나, 채우거나, 채워 넣습니다.</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 32px;border-radius:14px;background:rgba(143,122,229,.1);border-left:3px solid rgba(185,171,240,.8);z-index:6">
+ <span class="t3" style="font-size:26px">효과와 시기는 사람마다 다릅니다. 의료진이 진찰한 뒤 방향을 설명합니다.</span>
+ <span class="det" style="margin-left:18px;font-size:17px">개인차 있음 · 가격은 의료진 상담 이후</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · DERM laser (예시)</div></div><div class="slide" id="s16" data-n="16"><div class="bg" style="background-image:url(img/DERM_injection_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>16</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>DERMATOLOGY</div><h2>피부 · 전후 주의</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1010px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">먹는 약·영양제를 모두 알린다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">임신·임신 계획을 먼저 말한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">이전 시술 날짜를 알린다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">3~7일 술·사우나·격한 운동을 피한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">자외선 차단제를 꼼꼼히 바른다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">딱지를 억지로 뜯지 않는다</span></div></div>
+<div class="card" style="position:absolute;left:1196px;top:300px;width:508px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">한&nbsp;문제</div>
+ <div class="t3" style="margin-top:16px;font-size:25px">시술 뒤 눈이 잘 안 보이는 느낌이 들면?</div>
+ <div style="margin-top:26px;display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(95,199,163,.18);color:#5fc7a3;height:36px;font-size:18px">정답</span><span style="font-size:20px;color:#DCD6EC">바로 병원에 연락한다</span></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(255,255,255,.06);color:#8F87AC;height:36px;font-size:18px">오답</span><span style="font-size:20px;color:#8F87AC">하루 지켜본다</span></div></div>
+ <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(143,122,229,.2)"><div class="det" style="font-size:16px">자막 용어 · 색소 · 멜라닌 · 콜라겐 · 보툴리눔톡신 · 필러 · 스킨부스터 · 자외선 차단</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · DERM injection (예시)</div></div><div class="slide" id="s17" data-n="17"><div class="bg" style="background-image:url(img/PLAS_nose_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>17</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>PLASTIC SURGERY</div><h2>성형 · 한눈에</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Double eyelid</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">쌍꺼풀 수술</div>
+    <div class="det" style="margin-top:12px;font-size:17px">매몰법과 절개법, 눈 상태로 결정</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Ptosis correction</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">눈매교정</div>
+    <div class="det" style="margin-top:12px;font-size:17px">눈 뜨는 힘을 살려 졸린 눈매를 다룸</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Rhinoplasty</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">코 성형</div>
+    <div class="det" style="margin-top:12px;font-size:17px">주사로 채우거나 보형물로 구조를 만듦</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Fat grafting</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">지방이식</div>
+    <div class="det" style="margin-top:12px;font-size:17px">내 몸의 지방을 옮겨 볼륨을 만듦</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Facial contouring</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">안면윤곽 수술</div>
+    <div class="det" style="margin-top:12px;font-size:17px">얼굴 뼈 모양을 다듬는 수술</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:126px;display:flex;align-items:center;gap:20px;z-index:6">
+ <span class="tag-n" style="background:rgba(143,122,229,.2);color:#C9BBFF;border:1px solid rgba(143,122,229,.45)">카드를&nbsp;눌러&nbsp;보세요</span>
+ <span class="det" style="font-size:18px">대표 항목 5개 · 나머지는 '전체 질문 보기'에서 다룹니다</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · PLAS nose (예시)</div></div><div class="slide" id="s18" data-n="18"><div class="bg" style="background-image:url(img/PLAS_eye_lift_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>18</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>PLASTIC SURGERY</div><h2>성형 · 원리와 효과</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:20px;z-index:6"><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">상담</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">원하는 느낌을 최대한 자세히 말합니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">같은 수술도 뼈 구조와 피부 두께에 따라 결과가 달라집니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">검사</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">눈 건강·뼈 상태를 먼저 확인합니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">수술 전 시력과 눈 건강 확인이 필요한 경우가 있습니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">회복</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">마취와 회복 시간이 반드시 따라옵니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">체류 일정을 회복 기간에 맞춰 잡아야 합니다.</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 32px;border-radius:14px;background:rgba(143,122,229,.1);border-left:3px solid rgba(185,171,240,.8);z-index:6">
+ <span class="t3" style="font-size:26px">효과와 시기는 사람마다 다릅니다. 의료진이 진찰한 뒤 방향을 설명합니다.</span>
+ <span class="det" style="margin-left:18px;font-size:17px">개인차 있음 · 가격은 의료진 상담 이후</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · PLAS eye lift (예시)</div></div><div class="slide" id="s19" data-n="19"><div class="bg" style="background-image:url(img/PLAS_contour_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>19</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>PLASTIC SURGERY</div><h2>성형 · 전후 주의</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1010px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">복용 약·영양제·한약을 알린다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">흡연·음주 습관을 말한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">금식 여부는 병원 안내를 따른다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">체류 일정을 의료진과 먼저 상의한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">보호자 동행 여부를 정한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">귀국 뒤 연락할 방법을 받아 둔다</span></div></div>
+<div class="card" style="position:absolute;left:1196px;top:300px;width:508px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">한&nbsp;문제</div>
+ <div class="t3" style="margin-top:16px;font-size:25px">귀국 비행기 일정은 언제 정할까요?</div>
+ <div style="margin-top:26px;display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(95,199,163,.18);color:#5fc7a3;height:36px;font-size:18px">정답</span><span style="font-size:20px;color:#DCD6EC">의료진과 회복 일정을 상의한 뒤</span></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(255,255,255,.06);color:#8F87AC;height:36px;font-size:18px">오답</span><span style="font-size:20px;color:#8F87AC">수술 직후</span></div></div>
+ <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(143,122,229,.2)"><div class="det" style="font-size:16px">자막 용어 · 쌍꺼풀 · 매몰법 · 절개법 · 눈매교정 · 보형물 · 지방이식 · 윤곽 · 전신 마취</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · PLAS contour (예시)</div></div><div class="slide" id="s20" data-n="20"><div class="bg" style="background-image:url(img/DENT_implant_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>20</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>DENTISTRY</div><h2>치과 · 한눈에</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Dental implant</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">임플란트</div>
+    <div class="det" style="margin-top:12px;font-size:17px">빠진 이 자리에 인공 치아 뿌리를 심음</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Bone graft</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">뼈이식</div>
+    <div class="det" style="margin-top:12px;font-size:17px">부족한 턱뼈를 채워 고정할 힘을 만듦</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Orthodontics</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">치아 교정</div>
+    <div class="det" style="margin-top:12px;font-size:17px">약한 힘을 꾸준히 줘 배열을 바로잡음</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Teeth whitening</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">치아 미백</div>
+    <div class="det" style="margin-top:12px;font-size:17px">치아에 낀 색을 약으로 분해</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Scaling · Root canal</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">스케일링·신경치료</div>
+    <div class="det" style="margin-top:12px;font-size:17px">치석을 떼고 신경 치료한 치아를 덮어 지킴</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:126px;display:flex;align-items:center;gap:20px;z-index:6">
+ <span class="tag-n" style="background:rgba(143,122,229,.2);color:#C9BBFF;border:1px solid rgba(143,122,229,.45)">카드를&nbsp;눌러&nbsp;보세요</span>
+ <span class="det" style="font-size:18px">대표 항목 5개 · 나머지는 '전체 질문 보기'에서 다룹니다</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · DENT implant (예시)</div></div><div class="slide" id="s21" data-n="21"><div class="bg" style="background-image:url(img/DENT_whitening_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>21</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>DENTISTRY</div><h2>치과 · 원리와 효과</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:20px;z-index:6"><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">검사</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">촬영으로 뼈와 잇몸을 먼저 봅니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">뼈 양과 잇몸 상태에 따라 방법이 달라집니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">치료</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">한 번에 끝나지 않는 경우가 많습니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">방문 횟수와 기간을 미리 확인해야 합니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">관리</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">정기 검진이 결과를 지킵니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">여섯 달에 한 번 검진과 스케일링을 권합니다.</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 32px;border-radius:14px;background:rgba(143,122,229,.1);border-left:3px solid rgba(185,171,240,.8);z-index:6">
+ <span class="t3" style="font-size:26px">효과와 시기는 사람마다 다릅니다. 의료진이 진찰한 뒤 방향을 설명합니다.</span>
+ <span class="det" style="margin-left:18px;font-size:17px">개인차 있음 · 가격은 의료진 상담 이후</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · DENT whitening (예시)</div></div><div class="slide" id="s22" data-n="22"><div class="bg" style="background-image:url(img/DENT_gum_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>22</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>DENTISTRY</div><h2>치과 · 전후 주의</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1010px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">당뇨·골다공증 약을 알린다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">피가 잘 안 굳는 병력을 말한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">흡연 여부를 알린다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">방문 횟수를 미리 확인한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">귀국 뒤 치료를 어디서 이어갈지 정한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">마취 풀릴 때까지 뜨거운 음식을 피한다</span></div></div>
+<div class="card" style="position:absolute;left:1196px;top:300px;width:508px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">한&nbsp;문제</div>
+ <div class="t3" style="margin-top:16px;font-size:25px">짧게 머무는 고객님께 가장 먼저 확인할 것은?</div>
+ <div style="margin-top:26px;display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(95,199,163,.18);color:#5fc7a3;height:36px;font-size:18px">정답</span><span style="font-size:20px;color:#DCD6EC">필요한 방문 횟수</span></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(255,255,255,.06);color:#8F87AC;height:36px;font-size:18px">오답</span><span style="font-size:20px;color:#8F87AC">병원 인테리어</span></div></div>
+ <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(143,122,229,.2)"><div class="det" style="font-size:16px">자막 용어 · 임플란트 · 잇몸뼈 · 뼈이식 · 교정 · 미백 · 스케일링 · 신경 치료 · 크라운</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · DENT gum (예시)</div></div><div class="slide" id="s23" data-n="23"><div class="bg" style="background-image:url(img/OPHT_lasik_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>23</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>OPHTHALMOLOGY</div><h2>안과 · 한눈에</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">LASIK</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">라식</div>
+    <div class="det" style="margin-top:12px;font-size:17px">각막 안쪽을 다듬어 시력을 맞춤</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">LASEK</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">라섹</div>
+    <div class="det" style="margin-top:12px;font-size:17px">각막 표면을 다뤄 시력을 맞춤</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Cataract surgery</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">백내장 수술</div>
+    <div class="det" style="margin-top:12px;font-size:17px">뿌연 렌즈를 빼고 인공 렌즈를 넣음</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">RLE</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">굴절렌즈교환술</div>
+    <div class="det" style="margin-top:12px;font-size:17px">눈 속 렌즈를 바꿔 시력을 맞춤</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Eye examination</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">눈 정기 검진</div>
+    <div class="det" style="margin-top:12px;font-size:17px">망막과 눈 상태를 주기적으로 확인</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:126px;display:flex;align-items:center;gap:20px;z-index:6">
+ <span class="tag-n" style="background:rgba(143,122,229,.2);color:#C9BBFF;border:1px solid rgba(143,122,229,.45)">카드를&nbsp;눌러&nbsp;보세요</span>
+ <span class="det" style="font-size:18px">대표 항목 5개 · 나머지는 '전체 질문 보기'에서 다룹니다</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · OPHT lasik (예시)</div></div><div class="slide" id="s24" data-n="24"><div class="bg" style="background-image:url(img/OPHT_icl_lens_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>24</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>OPHTHALMOLOGY</div><h2>안과 · 원리와 효과</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:20px;z-index:6"><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">측정</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">각막 두께와 모양을 잽니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">검사를 통과해야 수술 방법을 정할 수 있습니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">선택</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">라식과 라섹 중에서 고릅니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">어느 쪽이 맞는지는 검사 결과가 정합니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">한계</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">수술은 그 시점의 도수를 맞춥니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">시간이 지나 도수가 다시 생길 수 있습니다.</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 32px;border-radius:14px;background:rgba(143,122,229,.1);border-left:3px solid rgba(185,171,240,.8);z-index:6">
+ <span class="t3" style="font-size:26px">효과와 시기는 사람마다 다릅니다. 의료진이 진찰한 뒤 방향을 설명합니다.</span>
+ <span class="det" style="margin-left:18px;font-size:17px">개인차 있음 · 가격은 의료진 상담 이후</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · OPHT icl lens (예시)</div></div><div class="slide" id="s25" data-n="25"><div class="bg" style="background-image:url(img/OPHT_dryeye_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>25</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>OPHTHALMOLOGY</div><h2>안과 · 전후 주의</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1010px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">콘택트렌즈를 미리 빼고 옵니다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">당뇨·안구건조를 알린다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">검사 시간을 넉넉히 잡는다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">눈을 절대 비비지 않는다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">안약은 정해진 시간에 넣는다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">귀국 뒤 검진할 곳을 정한다</span></div></div>
+<div class="card" style="position:absolute;left:1196px;top:300px;width:508px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">한&nbsp;문제</div>
+ <div class="t3" style="margin-top:16px;font-size:25px">수술 뒤 눈이 가려우면?</div>
+ <div style="margin-top:26px;display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(95,199,163,.18);color:#5fc7a3;height:36px;font-size:18px">정답</span><span style="font-size:20px;color:#DCD6EC">비비지 않고 안약과 병원 안내를 따른다</span></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(255,255,255,.06);color:#8F87AC;height:36px;font-size:18px">오답</span><span style="font-size:20px;color:#8F87AC">손으로 비빈다</span></div></div>
+ <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(143,122,229,.2)"><div class="det" style="font-size:16px">자막 용어 · 각막 · 라식 · 라섹 · 백내장 · 인공 렌즈 · 망막 · 안약 · 정밀 검사</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · OPHT dryeye (예시)</div></div><div class="slide" id="s26" data-n="26"><div class="bg" style="background-image:url(img/WEB_break_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(11,9,23,.9),rgba(8,6,15,.96))"><div style="position:absolute;left:0;right:0;top:330px;text-align:center;z-index:6">
+ <div style="font-size:16px;letter-spacing:.42em;color:#8F7AE5;font-weight:700">BREAK <div style="margin-top:26px;font-size:112px;font-weight:800;letter-spacing:-.05em;color:#fff;line-height:1.1">쉬는 시간 10분 <div style="margin-top:26px;font-size:26px;color:#A79FC6">13:56 – 14:06 · 중간 퀴즈는 다시 시작할 때</div><div style="position:absolute;left:0;right:0;top:700px;display:flex;justify-content:center;gap:18px;z-index:6">
+</div><div class="cap">배경 이미지 · WEB break (예시)</div></div><div class="slide" id="s27" data-n="27"><div class="bg" style="background-image:url(img/GYN_checkup_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>27</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>OBSTETRICS & GYNECOLOGY</div><h2>산부인과 · 한눈에</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Cervical screening</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">정기 검진·자궁경부암 검사</div>
+    <div class="det" style="margin-top:12px;font-size:17px">자궁 입구 세포를 채취해 이상을 확인</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">HPV vaccination</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">자궁경부암 예방 접종</div>
+    <div class="det" style="margin-top:12px;font-size:17px">관련 바이러스를 예방하는 백신</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Uterine fibroid</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">자궁근종 상담</div>
+    <div class="det" style="margin-top:12px;font-size:17px">양성 혹을 확인하고 관리 방법을 정함</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Menopause</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">갱년기 증상 상담</div>
+    <div class="det" style="margin-top:12px;font-size:17px">호르몬 변화로 생기는 증상을 상담</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Preconception checkup</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">임신 준비 검사</div>
+    <div class="det" style="margin-top:12px;font-size:17px">임신 전 몸 상태를 미리 확인</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:126px;display:flex;align-items:center;gap:20px;z-index:6">
+ <span class="tag-n" style="background:rgba(143,122,229,.2);color:#C9BBFF;border:1px solid rgba(143,122,229,.45)">카드를&nbsp;눌러&nbsp;보세요</span>
+ <span class="det" style="font-size:18px">대표 항목 5개 · 나머지는 '전체 질문 보기'에서 다룹니다</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · GYN checkup (예시)</div></div><div class="slide" id="s28" data-n="28"><div class="bg" style="background-image:url(img/GYN_ultrasound_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>28</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>OBSTETRICS & GYNECOLOGY</div><h2>산부인과 · 원리와 효과</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:20px;z-index:6"><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">존중</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">편안한 분위기와 설명을 먼저 챙깁니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">여성 의료진·통역 요청이 가능한지 먼저 확인합니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">검사</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">지금 상태를 확인하는 것입니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">'이상 없음'이 앞으로도 문제없다는 뜻은 아닙니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">보호</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">건강 정보는 동의 없이 알리지 않습니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">가족에게도 동의 없이는 알리지 않습니다.</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 32px;border-radius:14px;background:rgba(143,122,229,.1);border-left:3px solid rgba(185,171,240,.8);z-index:6">
+ <span class="t3" style="font-size:26px">효과와 시기는 사람마다 다릅니다. 의료진이 진찰한 뒤 방향을 설명합니다.</span>
+ <span class="det" style="margin-left:18px;font-size:17px">개인차 있음 · 가격은 의료진 상담 이후</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · GYN ultrasound (예시)</div></div><div class="slide" id="s29" data-n="29"><div class="bg" style="background-image:url(img/GYN_vaccine_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>29</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>OBSTETRICS & GYNECOLOGY</div><h2>산부인과 · 전후 주의</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1010px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">생리 기간을 피해 날짜를 잡는다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">임신 가능성을 먼저 말한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">호르몬 약·피임약을 알린다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">검사 뒤 출혈·불편감을 살핀다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">접종 뒤 15~30분 안정한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">개인정보 동의 범위를 확인한다</span></div></div>
+<div class="card" style="position:absolute;left:1196px;top:300px;width:508px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">한&nbsp;문제</div>
+ <div class="t3" style="margin-top:16px;font-size:25px">고객님의 검진 결과는 누구에게 알릴 수 있나요?</div>
+ <div style="margin-top:26px;display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(95,199,163,.18);color:#5fc7a3;height:36px;font-size:18px">정답</span><span style="font-size:20px;color:#DCD6EC">동의가 있는 사람에게만</span></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(255,255,255,.06);color:#8F87AC;height:36px;font-size:18px">오답</span><span style="font-size:20px;color:#8F87AC">동행한 가족에게 모두</span></div></div>
+ <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(143,122,229,.2)"><div class="det" style="font-size:16px">자막 용어 · 자궁경부 · 세포 검사 · 초음파 · 난소 · 자궁근종 · 갱년기 · 접종 · 개인정보 동의</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · GYN vaccine (예시)</div></div><div class="slide" id="s30" data-n="30"><div class="bg" style="background-image:url(img/URO_checkup_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>30</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>UROLOGY</div><h2>비뇨기과 · 한눈에</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">BPH</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">전립선비대증 진료</div>
+    <div class="det" style="margin-top:12px;font-size:17px">전립선이 커져 소변 줄기를 누르는 상태</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">PSA test</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">전립선암 혈액 검사</div>
+    <div class="det" style="margin-top:12px;font-size:17px">암 가능성을 참고하는 피 검사</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Urinary incontinence</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">요실금 진료</div>
+    <div class="det" style="margin-top:12px;font-size:17px">소변이 새는 증상을 원인별로 다룸</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Urinary stone</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">요로결석 진료</div>
+    <div class="det" style="margin-top:12px;font-size:17px">소변길에 생긴 돌을 크기·위치로 다룸</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Cystitis</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">방광염 관리</div>
+    <div class="det" style="margin-top:12px;font-size:17px">염증을 다루고 예방 습관을 안내</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:126px;display:flex;align-items:center;gap:20px;z-index:6">
+ <span class="tag-n" style="background:rgba(143,122,229,.2);color:#C9BBFF;border:1px solid rgba(143,122,229,.45)">카드를&nbsp;눌러&nbsp;보세요</span>
+ <span class="det" style="font-size:18px">대표 항목 5개 · 나머지는 '전체 질문 보기'에서 다룹니다</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · URO checkup (예시)</div></div><div class="slide" id="s31" data-n="31"><div class="bg" style="background-image:url(img/URO_blood_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>31</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>UROLOGY</div><h2>비뇨기과 · 원리와 효과</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:20px;z-index:6"><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">말하기</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">쑥스러운 고민을 편하게 꺼내도록 돕습니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">조용한 공간과 낮은 목소리로 안내합니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">확인</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">수치 하나로 단정하지 않습니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">피 검사 수치가 높다고 곧바로 병은 아닙니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">약</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">처방 없이 판단하지 않습니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">약은 반드시 진찰과 처방이 필요합니다.</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 32px;border-radius:14px;background:rgba(143,122,229,.1);border-left:3px solid rgba(185,171,240,.8);z-index:6">
+ <span class="t3" style="font-size:26px">효과와 시기는 사람마다 다릅니다. 의료진이 진찰한 뒤 방향을 설명합니다.</span>
+ <span class="det" style="margin-left:18px;font-size:17px">개인차 있음 · 가격은 의료진 상담 이후</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · URO blood (예시)</div></div><div class="slide" id="s32" data-n="32"><div class="bg" style="background-image:url(img/URO_urine_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>32</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>UROLOGY</div><h2>비뇨기과 · 전후 주의</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1010px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">심장약·혈압약을 알린다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">출처를 모르는 약을 보여 준다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">인터넷에서 산 약을 먹지 않는다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">수술 뒤 무거운 물건을 피한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">배뇨 근육 운동을 함께 한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">정기 추적 검사 일정을 정한다</span></div></div>
+<div class="card" style="position:absolute;left:1196px;top:300px;width:508px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">한&nbsp;문제</div>
+ <div class="t3" style="margin-top:16px;font-size:25px">진료 전에 꼭 알려야 하는 것은?</div>
+ <div style="margin-top:26px;display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(95,199,163,.18);color:#5fc7a3;height:36px;font-size:18px">정답</span><span style="font-size:20px;color:#DCD6EC">복용 중인 약 전부</span></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(255,255,255,.06);color:#8F87AC;height:36px;font-size:18px">오답</span><span style="font-size:20px;color:#8F87AC">직업</span></div></div>
+ <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(143,122,229,.2)"><div class="det" style="font-size:16px">자막 용어 · 전립선 · 요실금 · 요로결석 · 방광염 · 소변 검사 · 혈액 검사 · 처방 · 사생활 보호</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · URO urine (예시)</div></div><div class="slide" id="s33" data-n="33"><div class="bg" style="background-image:url(img/CHKP_body_scan_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>33</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>HEALTH CHECKUP</div><h2>건강검진 · 한눈에</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Comprehensive checkup</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">기본 종합검진</div>
+    <div class="det" style="margin-top:12px;font-size:17px">여러 검사를 묶어 한 번에 받는 검진</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Endoscopy</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">위·대장 내시경</div>
+    <div class="det" style="margin-top:12px;font-size:17px">카메라로 위와 대장 안쪽을 직접 관찰</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Imaging</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">영상 검사</div>
+    <div class="det" style="margin-top:12px;font-size:17px">초음파·단층촬영으로 몸속 모양을 확인</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Blood test</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">혈액 검사·종양표지자</div>
+    <div class="det" style="margin-top:12px;font-size:17px">몸속 수치와 참고 지표를 확인</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Cancer screening</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">암 검진</div>
+    <div class="det" style="margin-top:12px;font-size:17px">나이·성별·가족력에 맞춘 선별 검사</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:126px;display:flex;align-items:center;gap:20px;z-index:6">
+ <span class="tag-n" style="background:rgba(143,122,229,.2);color:#C9BBFF;border:1px solid rgba(143,122,229,.45)">카드를&nbsp;눌러&nbsp;보세요</span>
+ <span class="det" style="font-size:18px">대표 항목 5개 · 나머지는 '전체 질문 보기'에서 다룹니다</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · CHKP body scan (예시)</div></div><div class="slide" id="s34" data-n="34"><div class="bg" style="background-image:url(img/CHKP_blood_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>34</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>HEALTH CHECKUP</div><h2>건강검진 · 원리와 효과</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:20px;z-index:6"><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">찾기</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">아프기 전에 미리 찾아봅니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">증상이 없어도 검사가 필요한 이유입니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">해석</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">결과는 의사가 설명합니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">수치가 높다고 바로 병이라는 뜻은 아닙니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">지키기</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">다음 일정을 미루지 않는 것이 핵심입니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">주기표를 만들어 챙기는 방식이 현실적입니다.</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 32px;border-radius:14px;background:rgba(143,122,229,.1);border-left:3px solid rgba(185,171,240,.8);z-index:6">
+ <span class="t3" style="font-size:26px">효과와 시기는 사람마다 다릅니다. 의료진이 진찰한 뒤 방향을 설명합니다.</span>
+ <span class="det" style="margin-left:18px;font-size:17px">개인차 있음 · 가격은 의료진 상담 이후</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · CHKP blood (예시)</div></div><div class="slide" id="s35" data-n="35"><div class="bg" style="background-image:url(img/CHKP_endoscopy_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>35</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>HEALTH CHECKUP</div><h2>건강검진 · 전후 주의</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1010px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">금식 시간을 병원 안내로 확인한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">당뇨·혈압·항응고제를 미리 묻는다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">대장 내시경 전 식사 조절을 지킨다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">임신 가능성을 먼저 말한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">수면 내시경 당일 운전을 피한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">결과 수령 방법과 번역 여부를 확인한다</span></div></div>
+<div class="card" style="position:absolute;left:1196px;top:300px;width:508px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">한&nbsp;문제</div>
+ <div class="t3" style="margin-top:16px;font-size:25px">검진 전날 평소 먹는 약은?</div>
+ <div style="margin-top:26px;display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(95,199,163,.18);color:#5fc7a3;height:36px;font-size:18px">정답</span><span style="font-size:20px;color:#DCD6EC">병원에 먼저 물어본다</span></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(255,255,255,.06);color:#8F87AC;height:36px;font-size:18px">오답</span><span style="font-size:20px;color:#8F87AC">마음대로 끊는다</span></div></div>
+ <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(143,122,229,.2)"><div class="det" style="font-size:16px">자막 용어 · 종합 검진 · 내시경 · 초음파 · 단층촬영 · 종양표지자 · 선별 검사 · 금식 · 조직 검사</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · CHKP endoscopy (예시)</div></div><div class="slide" id="s36" data-n="36"><div class="bg" style="background-image:url(img/STEM_consult_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>36</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>STEM CELL</div><h2>줄기세포 · 한눈에</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Stem cell</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">줄기세포란</div>
+    <div class="det" style="margin-top:12px;font-size:17px">다른 세포로 자라날 수 있는 기본 세포</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Designation</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">법으로 관리되는 절차</div>
+    <div class="det" style="margin-top:12px;font-size:17px">지정된 병원 + 심의 적합 통보</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Research · Treatment</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">임상연구와 치료의 구분</div>
+    <div class="det" style="margin-top:12px;font-size:17px">연구인지, 조건부 치료인지 구분</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Autologous</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">자가 세포</div>
+    <div class="det" style="margin-top:12px;font-size:17px">내 몸에서 얻은 세포를 쓰는 방식</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div><div class="card" style="flex:1;padding:28px 24px;display:flex;flex-direction:column">
+    <div style="font-size:15px;letter-spacing:.16em;color:#8F7AE5;font-weight:700">Advertising</div>
+    <div style="margin-top:10px;font-size:27px;font-weight:800;color:#fff;line-height:1.35">광고 구분·연구 참여</div>
+    <div class="det" style="margin-top:12px;font-size:17px">광고 문구와 연구 참여 상품을 가려 봄</div>
+    <div style="margin-top:auto;padding-top:16px;font-size:13px;color:#6F6890;letter-spacing:.1em">앞면 · 뒤집으면 원리</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:126px;display:flex;align-items:center;gap:20px;z-index:6">
+ <span class="tag-n" style="background:rgba(143,122,229,.2);color:#C9BBFF;border:1px solid rgba(143,122,229,.45)">카드를&nbsp;눌러&nbsp;보세요</span>
+ <span class="det" style="font-size:18px">대표 항목 5개 · 나머지는 '전체 질문 보기'에서 다룹니다</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · STEM consult (예시)</div></div><div class="slide" id="s37" data-n="37"><div class="bg" style="background-image:url(img/STEM_lab_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>37</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>STEM CELL</div><h2>줄기세포 · 원리와 효과</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:20px;z-index:6"><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">지정</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">병원이 보건복지부 장관의 지정을 받습니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">지정 없이는 할 수 없습니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">심의</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">연구·치료 계획을 위원회가 살핍니다</div>
+    <div class="det" style="margin-top:14px;font-size:18px">적합 통보를 받아야 진행됩니다.</div></div><div class="card" style="flex:1;padding:32px 30px">
+    <div style="width:56px;height:56px;border-radius:16px;background:linear-gradient(140deg,rgba(143,122,229,.85),rgba(111,90,208,.5));display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff">승인·허가</div>
+    <div class="t3" style="margin-top:22px;font-size:27px">위험도 큰 연구는 식약처 승인</div>
+    <div class="det" style="margin-top:14px;font-size:18px">세포처리시설은 별도 허가 대상입니다.</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;padding:26px 32px;border-radius:14px;background:rgba(143,122,229,.1);border-left:3px solid rgba(185,171,240,.8);z-index:6">
+ <span class="t3" style="font-size:26px">효과와 시기는 사람마다 다릅니다. 의료진이 진찰한 뒤 방향을 설명합니다.</span>
+ <span class="det" style="margin-left:18px;font-size:17px">개인차 있음 · 가격은 의료진 상담 이후</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · STEM lab (예시)</div></div><div class="slide" id="s38" data-n="38"><div class="bg" style="background-image:url(img/STEM_review_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>38</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>STEM CELL</div><h2>줄기세포 · 전후 주의</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1010px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">지정 병원인지 확인한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">연구인지 치료인지 확인한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">심의 적합 통보를 확인한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">세포 채취·처리 방법을 확인한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">이상 반응 책임 주체를 확인한다</span></div><div style="display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:12px;background:rgba(18,14,34,.86);border:1px solid rgba(143,122,229,.22)">
+    <span style="width:20px;height:20px;border-radius:5px;border:1.5px solid rgba(143,122,229,.65);flex:0 0 auto"></span>
+    <span style="font-size:21px;line-height:1.45;color:#DCD6EC">연구 참여 비용을 청구하지 않는다</span></div></div>
+<div class="card" style="position:absolute;left:1196px;top:300px;width:508px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">한&nbsp;문제</div>
+ <div class="t3" style="margin-top:16px;font-size:25px">줄기세포 광고를 본 고객의 질문, 첫 답변은?</div>
+ <div style="margin-top:26px;display:flex;flex-direction:column;gap:12px">
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(95,199,163,.18);color:#5fc7a3;height:36px;font-size:18px">정답</span><span style="font-size:20px;color:#DCD6EC">지정 여부와 심의 내용을 함께 확인해 드릴게요</span></div>
+  <div style="display:flex;gap:12px;align-items:center"><span class="tag-n" style="background:rgba(255,255,255,.06);color:#8F87AC;height:36px;font-size:18px">오답</span><span style="font-size:20px;color:#8F87AC">가능합니다</span></div></div>
+ <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(143,122,229,.2)"><div class="det" style="font-size:16px">자막 용어 · 줄기세포 · 세포 채취 · 임상연구 · 재생의료기관 · 지정 · 심의 · 적합 통보 · 세포처리시설</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · STEM review (예시)</div></div><div class="slide" id="s39" data-n="39"><div class="bg" style="background-image:url(img/WEB_roleplay_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>39</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>ROLEPLAY</div><h2>상담 시나리오 롤플레이</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:306px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:18px">01</div>
+    <div style="margin-top:12px;font-size:26px;font-weight:800;color:#fff">문의 전화</div>
+    <div class="det" style="margin-top:12px;font-size:17.5px">중국 환자가 위챗으로 첫 문의를 보냅니다.</div>
+    <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(143,122,229,.2);font-size:17px;color:#C9BBFF;font-weight:700">무엇을 먼저 물어야 할까요?</div></div><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:18px">02</div>
+    <div style="margin-top:12px;font-size:26px;font-weight:800;color:#fff">조건 확인</div>
+    <div class="det" style="margin-top:12px;font-size:17.5px">나이·상태·희망 시기를 확인합니다.</div>
+    <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(143,122,229,.2);font-size:17px;color:#C9BBFF;font-weight:700">어디까지 물어도 되는 걸까요?</div></div><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:18px">03</div>
+    <div style="margin-top:12px;font-size:26px;font-weight:800;color:#fff">안내와 한계</div>
+    <div class="det" style="margin-top:12px;font-size:17.5px">가능성은 의료진 판단임을 안내합니다.</div>
+    <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(143,122,229,.2);font-size:17px;color:#C9BBFF;font-weight:700">어떤 문장으로 말할까요?</div></div><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:18px">04</div>
+    <div style="margin-top:12px;font-size:26px;font-weight:800;color:#fff">다음 단계</div>
+    <div class="det" style="margin-top:12px;font-size:17.5px">예약·비자·체류 일정으로 연결합니다.</div>
+    <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(143,122,229,.2);font-size:17px;color:#C9BBFF;font-weight:700">무엇을 남겨야 할까요?</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:122px;display:flex;gap:24px;z-index:6">
+ <div class="card" style="flex:1;padding:26px 30px"><span class="lb" style="font-size:19px">해볼&nbsp;것</span><div class="t3" style="margin-top:12px;font-size:24px">참석자 2명이 짝을 지어 3분씩 바꿔가며 연습합니다.</div></div>
+ <div class="card" style="flex:1;padding:26px 30px;border-color:rgba(239,123,147,.34)"><span class="lb" style="font-size:19px;color:#ef7b93">하지&nbsp;않을&nbsp;것</span><div class="t3" style="margin-top:12px;font-size:24px">효과 보장, 가격 단정, 의료 판단 대신하기.</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB roleplay (예시)</div></div><div class="slide" id="s40" data-n="40"><div class="bg" style="background-image:url(img/WEB_roleplay_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>40</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>ROLEPLAY</div><h2>무대에서 하지 않을 말</h2></div>
+<div style="position:absolute;left:140px;top:300px;width:1040px;display:flex;flex-direction:column;gap:14px;z-index:6"><div style="display:flex;align-items:center;gap:24px;padding:22px 28px;border-radius:14px;background:rgba(239,123,147,.07);border:1px solid rgba(239,123,147,.26)">
+    <span style="font-size:22px;font-weight:800;color:#ef7b93;width:140px;flex:0 0 auto">효과 보장</span>
+    <span style="font-size:22px;color:#DCD6EC">"이 시술 받으면 확실히 좋아집니다"</span>
+    <span class="tag-n" style="margin-left:auto;background:rgba(239,123,147,.16);color:#ef7b93;height:34px;font-size:17px">금지</span></div><div style="display:flex;align-items:center;gap:24px;padding:22px 28px;border-radius:14px;background:rgba(239,123,147,.07);border:1px solid rgba(239,123,147,.26)">
+    <span style="font-size:22px;font-weight:800;color:#ef7b93;width:140px;flex:0 0 auto">경험담</span>
+    <span style="font-size:22px;color:#DCD6EC">"저도 했는데 완전히 달라졌어요"</span>
+    <span class="tag-n" style="margin-left:auto;background:rgba(239,123,147,.16);color:#ef7b93;height:34px;font-size:17px">금지</span></div><div style="display:flex;align-items:center;gap:24px;padding:22px 28px;border-radius:14px;background:rgba(239,123,147,.07);border:1px solid rgba(239,123,147,.26)">
+    <span style="font-size:22px;font-weight:800;color:#ef7b93;width:140px;flex:0 0 auto">전후 사진</span>
+    <span style="font-size:22px;color:#DCD6EC">"이 사진처럼 됩니다"</span>
+    <span class="tag-n" style="margin-left:auto;background:rgba(239,123,147,.16);color:#ef7b93;height:34px;font-size:17px">금지</span></div><div style="display:flex;align-items:center;gap:24px;padding:22px 28px;border-radius:14px;background:rgba(239,123,147,.07);border:1px solid rgba(239,123,147,.26)">
+    <span style="font-size:22px;font-weight:800;color:#ef7b93;width:140px;flex:0 0 auto">의료 판단</span>
+    <span style="font-size:22px;color:#DCD6EC">"이 정도면 수술 가능합니다"</span>
+    <span class="tag-n" style="margin-left:auto;background:rgba(239,123,147,.16);color:#ef7b93;height:34px;font-size:17px">금지</span></div><div style="display:flex;align-items:center;gap:24px;padding:22px 28px;border-radius:14px;background:rgba(239,123,147,.07);border:1px solid rgba(239,123,147,.26)">
+    <span style="font-size:22px;font-weight:800;color:#ef7b93;width:140px;flex:0 0 auto">가격 단정</span>
+    <span style="font-size:22px;color:#DCD6EC">"대략 이 정도면 됩니다"</span>
+    <span class="tag-n" style="margin-left:auto;background:rgba(239,123,147,.16);color:#ef7b93;height:34px;font-size:17px">금지</span></div></div>
+<div class="card" style="position:absolute;left:1226px;top:300px;width:478px;padding:34px 32px;z-index:6">
+ <div class="lb" style="font-size:19px">이렇게&nbsp;바꿔&nbsp;말합니다</div>
+ <div style="margin-top:20px;display:flex;flex-direction:column;gap:22px">
+  <div><div style="font-size:16px;color:#8F87AC">효과 질문</div><div class="t3" style="margin-top:6px;font-size:22px;color:#C9BBFF">"개인차가 있어서, 의료진이 진찰한 뒤 설명드립니다."</div></div>
+  <div><div style="font-size:16px;color:#8F87AC">가격 질문</div><div class="t3" style="margin-top:6px;font-size:22px;color:#C9BBFF">"상태에 따라 달라지고, 상담 이후 결정됩니다."</div></div>
+  <div><div style="font-size:16px;color:#8F87AC">가능 여부</div><div class="t3" style="margin-top:6px;font-size:22px;color:#C9BBFF">"검사 후 의료진이 판단합니다."</div></div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB roleplay (예시)</div></div><div class="slide" id="s41" data-n="41"><div class="bg" style="background-image:url(img/WEB_job_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>41</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>CAREER</div><h2>병원 코디네이터는 무슨 일을 하나</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:30px 28px"><div style="font-size:26px;font-weight:800;color:#C9BBFF">①&nbsp;안내</div>
+    <div class="det" style="margin-top:14px;font-size:19px">일정·비용·서류를 환자 언어로 안내</div></div><div class="card" style="flex:1;padding:30px 28px"><div style="font-size:26px;font-weight:800;color:#C9BBFF">②&nbsp;연결</div>
+    <div class="det" style="margin-top:14px;font-size:19px">환자와 의료진 사이를 잇고 통역합니다</div></div><div class="card" style="flex:1;padding:30px 28px"><div style="font-size:26px;font-weight:800;color:#C9BBFF">③&nbsp;확인</div>
+    <div class="det" style="margin-top:14px;font-size:19px">동의서·계약·개인정보를 점검합니다</div></div><div class="card" style="flex:1;padding:30px 28px"><div style="font-size:26px;font-weight:800;color:#C9BBFF">④&nbsp;관리</div>
+    <div class="det" style="margin-top:14px;font-size:19px">입국부터 귀국 뒤 사후관리까지 따라갑니다</div></div></div>
+<div style="position:absolute;left:140px;right:120px;top:520px;z-index:6">
+ <div class="t4" style="font-size:42px">하루의 대부분은 <span style="color:#C9BBFF">설명</span>과 <span style="color:#C9BBFF">확인</span>입니다.</div>
+ <div class="det" style="margin-top:20px;font-size:21px">시술을 결정하는 사람이 아니라, 결정에 필요한 정보를 정확히 전달하는 사람입니다.</div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:120px;display:flex;gap:20px;z-index:6">
+ <div class="card" style="flex:1;padding:24px 28px"><span class="lb" style="font-size:18px">하루&nbsp;일과</span><div class="det" style="margin-top:10px;font-size:18px">예약 확인 · 통역 · 서류 준비 · 사후 연락</div></div>
+ <div class="card" style="flex:1;padding:24px 28px"><span class="lb" style="font-size:18px">필요한&nbsp;힘</span><div class="det" style="margin-top:10px;font-size:18px">언어 · 문서 이해 · 경계 지키기</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB job (예시)</div></div><div class="slide" id="s42" data-n="42"><div class="bg" style="background-image:url(img/WEB_role_4type_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>42</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>CAREER</div><h2>역할 4가지와 필요한 힘</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:30px 26px"><div class="lb" style="font-size:17px">Language</div>
+    <div style="margin-top:12px;font-size:27px;font-weight:800;color:#fff">역할</div><div class="det" style="margin-top:12px;font-size:17px">환자 언어로 정확하게 설명</div></div><div class="card" style="flex:1;padding:30px 26px"><div class="lb" style="font-size:17px">Bridge</div>
+    <div style="margin-top:12px;font-size:27px;font-weight:800;color:#fff">역할</div><div class="det" style="margin-top:12px;font-size:17px">환자와 의료진 사이 연결</div></div><div class="card" style="flex:1;padding:30px 26px"><div class="lb" style="font-size:17px">Check</div>
+    <div style="margin-top:12px;font-size:27px;font-weight:800;color:#fff">역할</div><div class="det" style="margin-top:12px;font-size:17px">계약·동의·개인정보 점검</div></div><div class="card" style="flex:1;padding:30px 26px"><div class="lb" style="font-size:17px">Care</div>
+    <div style="margin-top:12px;font-size:27px;font-weight:800;color:#fff">역할</div><div class="det" style="margin-top:12px;font-size:17px">입국부터 사후관리까지</div></div></div>
+<div style="position:absolute;left:140px;right:120px;top:520px;display:flex;gap:18px;z-index:6">
+ <div class="card" style="flex:1;padding:26px 30px"><div class="lb" style="font-size:18px">기본기</div><div class="det" style="margin-top:10px;font-size:18px">중국어 응대 · 의료 용어 · 문서 작성</div></div>
+ <div class="card" style="flex:1;padding:26px 30px"><div class="lb" style="font-size:18px">태도</div><div class="det" style="margin-top:10px;font-size:18px">단정하지 않기 · 기록하기 · 즉시 보고</div></div>
+ <div class="card" style="flex:1;padding:26px 30px"><div class="lb" style="font-size:18px">법</div><div class="det" style="margin-top:10px;font-size:18px">등록 제도 · 광고 규정 · 개인정보</div></div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:124px;z-index:6"><span class="det" style="font-size:19px">이 네 가지는 과(科)와 상관없이 모든 진료과에서 똑같이 쓰입니다.</span></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB role 4type (예시)</div></div><div class="slide" id="s43" data-n="43"><div class="bg" style="background-image:url(img/WEB_partnership_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>43</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>CAREER</div><h2>취업 가능성 읽는 법</h2></div>
+<div style="position:absolute;left:140px;top:310px;width:700px;z-index:6">
+ <svg width="240" height="240" viewBox="0 0 240 240"><circle cx="120" cy="120" r="90" fill="none" stroke="rgba(143,122,229,.13)" stroke-width="24"/>
+ <circle cx="120" cy="120" r="90" fill="none" stroke="url(#g2)" stroke-width="24" stroke-linecap="round" stroke-dasharray="350.6 214.9" transform="rotate(-90 120 120)"/>
+ <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B9ABF0"/><stop offset="1" stop-color="#6F5AD0"/></linearGradient></defs>
+ <text x="120" y="118" text-anchor="middle" font-size="40" font-weight="800" fill="#fff" font-family="sans-serif">62.9%</text>
+ <text x="120" y="146" text-anchor="middle" font-size="12" fill="#8F87AC" font-family="sans-serif">피부과 방문 비중</text></svg>
+ <div style="margin-top:26px" class="t2">숫자는 <b style="color:#fff">기회의 크기</b>를 말해 줍니다. 다만 자리가 늘어난 만큼 <b style="color:#fff">설명할 수 있는 사람</b>이 필요합니다.</div></div>
+<div style="position:absolute;left:860px;top:310px;width:900px;display:flex;flex-direction:column;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:17px">수요</div><div class="det" style="margin-top:12px;font-size:18px">외국인 환자 201만 명 · 중국 환자 137.5% 증가</div></div><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:17px">자리</div><div class="det" style="margin-top:12px;font-size:18px">병원·유치업체의 외국인환자 담당 부서</div></div><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:17px">조건</div><div class="det" style="margin-top:12px;font-size:18px">언어 + 법 이해 + 문서 처리</div></div>
+ <div class="card" style="padding:28px 26px;border-color:rgba(239,123,147,.26)"><div class="lb" style="font-size:17px;color:#ef7b93">주의</div>
+ <div class="det" style="margin-top:12px;font-size:18px">"자격증만 따면 바로 취업" 같은 보장은 하지 않습니다. 병원마다 요구가 다르고, 언어와 실무가 함께 필요합니다.</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB partnership (예시)</div></div><div class="slide" id="s44" data-n="44"><div class="bg" style="background-image:url(img/WEB_partnership_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>44</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>PARTNERSHIP</div><h2>협력 제안</h2></div>
+<div style="position:absolute;left:140px;right:120px;top:300px;display:flex;gap:16px;z-index:6"><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:17px">01</div>
+    <div style="margin-top:12px;font-size:24px;font-weight:800;color:#fff">무엇을</div><div class="det" style="margin-top:10px;font-size:17px">외국인 환자 응대 교육과 실습</div></div><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:17px">02</div>
+    <div style="margin-top:12px;font-size:24px;font-weight:800;color:#fff">어떻게</div><div class="det" style="margin-top:10px;font-size:17px">현장 사례·롤플레이·문서 점검</div></div><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:17px">03</div>
+    <div style="margin-top:12px;font-size:24px;font-weight:800;color:#fff">누구와</div><div class="det" style="margin-top:10px;font-size:17px">병원 담당 부서·유치업체</div></div><div class="card" style="flex:1;padding:28px 26px"><div class="lb" style="font-size:17px">04</div>
+    <div style="margin-top:12px;font-size:24px;font-weight:800;color:#fff">다음</div><div class="det" style="margin-top:10px;font-size:17px">자료 공유와 후속 일정 안내</div></div></div>
+<div style="position:absolute;left:140px;right:120px;top:500px;z-index:6"><div class="t4" style="font-size:44px">교육은 <span style="color:#C9BBFF">현장에서 쓰는 문장</span>으로 끝나야 합니다.</div></div>
+<div style="position:absolute;left:140px;right:120px;bottom:124px;display:flex;gap:20px;z-index:6">
+ <div class="card" style="flex:1;padding:26px 30px"><span class="lb" style="font-size:18px">제공</span><div class="det" style="margin-top:10px;font-size:18px">강의안 · 질문 89건 · 웹 자료</div></div>
+ <div class="card" style="flex:1;padding:26px 30px"><span class="lb" style="font-size:18px">문의</span><div class="det" style="margin-top:10px;font-size:18px">조정원 이사 · jpc.cho@acromobility.com</div></div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB partnership (예시)</div></div><div class="slide" id="s45" data-n="45"><div class="bg" style="background-image:url(img/WEB_qa_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div class="top"><div class="brand"><img src="img/logo_hion.png"><span class="sep"></span><span class="tag">HIIONN&nbsp;·&nbsp;MEDICAL&nbsp;TOURISM</span></div>
+<div class="pg"><b>45</b><span>/ 46</span></div></div><div class="hd"><div class="kicker"><span class="ln"></span>Q &amp; A</div><h2>질문 받습니다</h2></div>
+<div style="position:absolute;left:140px;top:320px;width:900px;z-index:6">
+ <div class="t4" style="font-size:50px">가격·효과·의료 판단 질문에는<br><span style="color:#C9BBFF">같은 문장으로</span> 답합니다.</div>
+ <div style="margin-top:40px;display:flex;flex-direction:column;gap:18px">
+  <div class="card" style="padding:24px 30px"><span class="lb" style="font-size:18px">가격</span><div class="t3" style="margin-top:8px;font-size:24px">"환자 상태에 따라 달라질 수 있으며, 자세한 비용은 의료진 상담 이후 결정됩니다."</div></div>
+  <div class="card" style="padding:24px 30px"><span class="lb" style="font-size:18px">효과</span><div class="t3" style="margin-top:8px;font-size:24px">"사람마다 다르고, 의료진이 진찰한 뒤 설명합니다."</div></div>
+  <div class="card" style="padding:24px 30px"><span class="lb" style="font-size:18px">판단</span><div class="t3" style="margin-top:8px;font-size:24px">"의사 선생님이 검사 후 판단합니다."</div></div></div></div>
+<div class="card" style="position:absolute;left:1100px;top:320px;width:604px;padding:34px 32px;text-align:center;z-index:6">
+ <div class="lb" style="font-size:18px">위챗&nbsp;1:1&nbsp;질문</div>
+ <div style="margin-top:20px;background:#fff;border-radius:16px;padding:16px;display:inline-block"><div style="width:220px;height:220px;background:#EDEAF7;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#6F6890;font-size:14px">img/wechat_qr.png</div></div>
+ <div class="det" style="margin-top:18px;font-size:17px">wxid_zu39cayvlvxe12</div></div><div class="rule"></div><div class="foot">2026&nbsp;SEMINAR&nbsp;·&nbsp;의료 웰니스 관광&nbsp;·&nbsp;병원 코디네이터&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;조정원 이사</div><div class="cap">배경 이미지 · WEB qa (예시)</div></div><div class="slide" id="s46" data-n="46"><div class="bg" style="background-image:url(img/WEB_closing_01.jpg)"></div><div class="scrim"></div><div class="tint"></div><div class="grain"></div><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(11,9,23,.86),rgba(8,6,15,.96))"></div>
+<div class="grain"></div>
+<div style="position:absolute;left:140px;top:250px;width:1100px;z-index:6">
+ <div class="kicker" style="font-size:18px">THANK YOU</div>
+ <div style="margin-top:26px;font-size:104px;line-height:1.12;font-weight:800;letter-spacing:-.045em;color:#fff">두 시간,<br>여기까지입니다</div>
+ <div style="margin-top:34px;font-size:25px;line-height:1.8;color:#B6AED2">상담실장은 쉬운 말로 설명하고, 의료 판단은 의사에게 넘깁니다.<br>효과는 개인차, 가격은 의료진 상담 이후. 법과 안전을 아는 안내자가 신뢰의 출발점입니다.</div>
+</div>
+<div style="position:absolute;left:140px;bottom:130px;display:flex;gap:56px;z-index:6">
+ <div style="padding-left:26px;border-left:2px solid rgba(143,122,229,.75)"><div class="det" style="font-size:13px;letter-spacing:.24em">강사</div><div style="margin-top:10px;font-size:30px;font-weight:700;color:#fff">조정원 이사</div></div>
+ <div style="padding-left:26px;border-left:2px solid rgba(143,122,229,.75)"><div class="det" style="font-size:13px;letter-spacing:.24em">문의</div><div style="margin-top:10px;font-size:26px;font-weight:700;color:#fff">jpc.cho@acromobility.com</div></div>
+ <div style="padding-left:26px;border-left:2px solid rgba(143,122,229,.75)"><div class="det" style="font-size:13px;letter-spacing:.24em">위챗</div><div style="margin-top:10px;font-size:26px;font-weight:700;color:#fff">wxid_zu39cayvlvxe12</div></div>
+</div>
+<div style="position:absolute;right:120px;bottom:110px;width:520px;text-align:right;z-index:6">
+ <div style="font-size:13px;letter-spacing:.2em;color:#8F87AE">공동주최</div>
+ <div style="margin-top:14px;display:flex;justify-content:flex-end;gap:18px;align-items:center">
+  <span style="width:64px;height:64px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center"><img src="img/logo_gilim.png" style="width:100%;height:100%;object-fit:contain"></span>
+  <img src="img/logo_hion.png" style="height:44px"></div></div><div class="cap">배경 이미지 · WEB closing (예시)</div></div>
+</div></div>
+<div class="ui"><div class="bar" id="bar"></div></div>
+<div class="hint">← → 이동 · C 자막 · D 데모 · F 전체화면</div>
+<div class="hud"><button onclick="go(-1)">◀</button><button onclick="go(1)">▶</button>
+<button onclick="toggleCap()">중문 자막</button><button onclick="openDemo()">위챗 데모</button></div>
+<div class="capbar" id="capbar"><div class="mode" id="capmode">사전 모드 · 오프라인</div>
+<div class="ko" id="capko">자막 대기 중 — C 키로 켜고 끕니다</div><div class="zh" id="capzh">实时中文字幕</div></div>
+<div class="modal" id="modal"><div class="mtop">
+<button onclick="demoGo('medical')">01 병원 예약 플로우</button>
+<button onclick="demoGo('academy')">02 아카데미 신청</button>
+<button onclick="demoGo('ai')">03 AI 예약·결제 Q&A</button>
+<button onclick="closeDemo()" style="margin-left:20px">닫기 (Esc)</button></div>
+<iframe id="demoFrame" src="demo/index2.html"></iframe>
+<div style="font-size:13px;color:#8F87AC">INTERACTIVE DEMO · 예시 데이터 · 실제 WeChat·결제·AI API 미연동</div></div>
+<script>
+var cur=0, slides=[].slice.call(document.querySelectorAll('.slide')), N=slides.length;
+function show(i){ i=Math.max(0,Math.min(N-1,i)); slides.forEach(function(s,k){s.classList.toggle('on',k===i);}); cur=i;
+ document.getElementById('bar').style.width=((i+1)/N*100)+'%'; }
+function go(d){ show(cur+d); }
+function fit(){ var s=Math.min(window.innerWidth/1920, window.innerHeight/1080);
+ document.getElementById('scaler').style.transform='scale('+s+')'; }
+window.addEventListener('resize',fit); fit(); show(0);
+var lock=false;
+window.addEventListener('wheel',function(e){ if(lock) return; if(Math.abs(e.deltaY)<18) return; lock=true;
+ go(e.deltaY>0?1:-1); setTimeout(function(){lock=false;},620); },{passive:true});
+window.addEventListener('keydown',function(e){
+ if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(1);}
+ if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();go(-1);}
+ if(e.key==='Home')show(0); if(e.key==='End')show(N-1);
+ if(e.key==='c'||e.key==='C')toggleCap();
+ if(e.key==='d'||e.key==='D')openDemo();
+ if(e.key==='Escape')closeDemo();
+ if(e.key==='f'||e.key==='F'){ if(!document.fullscreenElement)document.documentElement.requestFullscreen(); else document.exitFullscreen(); }
+});
+var CAP={"환자":"患者","상담":"咨询","가격":"价格","비용":"费用","의료진":"医疗团队","상담 이후":"面诊后","결정":"决定","효과":"效果","개인차":"因人而异","비자":"签证","등록":"登记","병원":"医院","예약":"预约","진료":"诊疗","수술":"手术","시술":"施术","회복":"恢复","주의":"注意事项","안내":"说明","동의":"同意","서류":"材料","질문":"提问","감사합니다":"谢谢"};
+function capOn(){return document.getElementById('capbar').classList.contains('on');}
+function toggleCap(){ document.getElementById('capbar').classList.toggle('on'); if(capOn())startRec(); else stopRec(); }
+var rec=null, recOn=false;
+function startRec(){
+ if(recOn) return; var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+ if(!SR){ document.getElementById('capmode').textContent='음성 인식 미지원 · 사전 모드'; return; }
+ rec=new SR(); rec.lang='ko-KR'; rec.continuous=true; rec.interimResults=true;
+ rec.onresult=function(ev){ var t=''; for(var i=ev.resultIndex;i<ev.results.length;i++){ t+=ev.results[i][0].transcript; }
+  document.getElementById('capko').textContent=t;
+  var zh=t.trim().split(/\s+/).map(function(w){return CAP[w]||'';}).join('');
+  document.getElementById('capzh').textContent = zh || '（번역 사전에 없는 표현입니다 · 온라인 번역 연결 시 자동 번역）';
+ };
+ rec.onend=function(){ if(capOn()){ try{rec.start();}catch(e){} } };
+ try{ rec.start(); recOn=true; document.getElementById('capmode').textContent='음성 인식 중 · ko-KR'; }catch(e){}
+}
+function stopRec(){ try{rec&&rec.stop();}catch(e){} recOn=false; }
+var frame=document.getElementById('demoFrame');
+function openDemo(){ document.getElementById('modal').classList.add('on'); }
+function closeDemo(){ document.getElementById('modal').classList.remove('on'); }
+function demoGo(k){
+ try{ var w=frame.contentWindow, doc=frame.contentDocument;
+  if(k==='ai'){ w.dGo('ai'); } else { w.dStart(k); }
+  var el=doc.getElementById('demo'); if(el) el.scrollIntoView({behavior:'smooth'});
+ }catch(e){}
+}
+</script></body></html>
